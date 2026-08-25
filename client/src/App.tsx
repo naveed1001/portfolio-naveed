@@ -16,7 +16,7 @@ import ProjectDetails from "./pages/ProjectDetails";
 
 import AboutSection from "./components/about/AboutSection";
 import SkillsSection from "./components/skills/SkillsSection";
-import DevelopmentProcess from "./components/about/DevelopmentProcess";
+//import DevelopmentProcess from "./components/about/DevelopmentProcess";
 import ContactSection from "./sections/ContactSection";
 const Home = () => {
   return (
@@ -27,7 +27,7 @@ const Home = () => {
       <AboutSection/>
       {/* <Skills /> */}
       <SkillsSection/>
-      <DevelopmentProcess/>
+      {/* <DevelopmentProcess/> */}
       <Education />
 
       <Projects />
