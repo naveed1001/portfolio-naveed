@@ -174,107 +174,107 @@ const Hero = () => {
     {/* =========================
         MAIN CODE CARD
     ========================== */}
-    <div
-      className="
-        absolute
-        inset-6
-        overflow-hidden
-        rounded-[1.75rem]
-        border
-        border-white/10
-        bg-white/[0.03]
-        shadow-2xl
-        backdrop-blur-xl
-        sm:inset-8
-        sm:rounded-[2rem]
-      "
-    >
-      {/* Top */}
-      <div className="flex items-center justify-between border-b border-white/10 px-4 py-3 sm:px-5 sm:py-4">
-        <div className="flex gap-1.5">
-          <span className="h-2.5 w-2.5 rounded-full bg-red-400/70" />
-          <span className="h-2.5 w-2.5 rounded-full bg-yellow-400/70" />
-          <span className="h-2.5 w-2.5 rounded-full bg-green-400/70" />
-        </div>
-
-        <Code2
-          size={17}
-          className="text-zinc-500 sm:size-[18px]"
-        />
-      </div>
-
-      {/* Code */}
-      <div
-        className="
-          overflow-hidden
-          p-4
-          font-mono
-          text-[11px]
-          leading-6
-          sm:p-6
-          sm:text-sm
-          sm:leading-7
-        "
-      >
-        <p className="text-purple-400">
-          const
-          <span className="text-cyan-400">
-            {" "}
-            developer
-          </span>{" "}
-          = {"{"}
-        </p>
-
-        <p className="pl-4 text-zinc-400 sm:pl-5">
-          name:
-          <span className="text-emerald-400">
-            {" "}“Umar Hashir”
-          </span>
-          ,
-        </p>
-
-        <p className="pl-4 text-zinc-400 sm:pl-5">
-          role:
-          <span className="text-emerald-400">
-            {" "}“MERN Developer”
-          </span>
-          ,
-        </p>
-
-        <p className="pl-4 text-zinc-400 sm:pl-5">
-          stack:
-          <span className="text-emerald-400">
-            {" "}“TypeScript”
-          </span>
-          ,
-        </p>
-
-        <p className="pl-4 text-zinc-400 sm:pl-5">
-          passion:
-          <span className="text-emerald-400">
-            {" "}“Building”
-          </span>
-        </p>
-
-        <p className="text-zinc-500">
-          {"}"};
-        </p>
-
-        <div className="mt-4 border-t border-white/5 pt-4 sm:mt-5 sm:pt-5">
-          <p className="text-zinc-500">
-            // Always learning.
-          </p>
-
-          <p className="text-zinc-500">
-            // Always building.
-          </p>
-
-          <p className="mt-2 text-violet-400">
-            developer.build();
-          </p>
-        </div>
-      </div>
+  {/* Main Card */}
+<div
+  className="
+    absolute
+    inset-5
+    overflow-hidden
+    rounded-[1.5rem]
+    border
+    border-white/10
+    bg-white/[0.03]
+    shadow-2xl
+    backdrop-blur-xl
+    sm:inset-8
+    sm:rounded-[2rem]
+  "
+>
+  {/* Top */}
+  <div className="flex items-center justify-between border-b border-white/10 px-4 py-3 sm:px-5 sm:py-4">
+    <div className="flex gap-1.5">
+      <span className="h-2 w-2 rounded-full bg-red-400/70 sm:h-2.5 sm:w-2.5" />
+      <span className="h-2 w-2 rounded-full bg-yellow-400/70 sm:h-2.5 sm:w-2.5" />
+      <span className="h-2 w-2 rounded-full bg-green-400/70 sm:h-2.5 sm:w-2.5" />
     </div>
+
+    <Code2
+      size={16}
+      className="text-zinc-500 sm:size-[18px]"
+    />
+  </div>
+
+  {/* Code */}
+  <div
+    className="
+      p-4
+      font-mono
+      text-[11px]
+      leading-6
+      sm:p-6
+      sm:text-sm
+      sm:leading-7
+    "
+  >
+    <p className="text-purple-400">
+      const
+      <span className="text-cyan-400">
+        {" "}developer
+      </span>{" "}
+      = {"{"}
+    </p>
+
+    <p className="pl-4 text-zinc-400 sm:pl-5">
+      name:
+      <span className="text-emerald-400">
+        {" "}“Umar Hashir”
+      </span>
+      ,
+    </p>
+
+    <p className="pl-4 text-zinc-400 sm:pl-5">
+      role:
+      <span className="text-emerald-400">
+        {" "}“MERN Developer”
+      </span>
+      ,
+    </p>
+
+    <p className="pl-4 text-zinc-400 sm:pl-5">
+      stack:
+      <span className="text-emerald-400">
+        {" "}“TypeScript”
+      </span>
+      ,
+    </p>
+
+    <p className="pl-4 text-zinc-400 sm:pl-5">
+      passion:
+      <span className="text-emerald-400">
+        {" "}“Building”
+      </span>
+    </p>
+
+    <p className="text-zinc-500">
+      {"}"};
+    </p>
+
+    {/* Learning */}
+    <div className="mt-3 border-t border-white/5 pt-3 sm:mt-5 sm:pt-5">
+      <p className="text-zinc-500">
+        // Always learning.
+      </p>
+
+      <p className="text-zinc-500">
+        // Always building.
+      </p>
+
+      <p className="mt-1.5 text-violet-400 sm:mt-2">
+        developer.build();
+      </p>
+    </div>
+  </div>
+</div>
 
     {/* =========================
         FLOATING CARD 1
@@ -351,21 +351,21 @@ const Hero = () => {
         sm:p-3
       "
     >
-      <div className="flex items-center gap-2.5 sm:gap-3">
-        <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-xl bg-cyan-500/10 text-cyan-400 sm:h-9 sm:w-9">
-          <Code2 size={17} />
-        </div>
+      <div className="flex items-center gap-2 sm:gap-3">
+  <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-cyan-500/10 text-cyan-400 sm:h-9 sm:w-9">
+    <Code2 size={16} className="sm:size-[18px]" />
+  </div>
 
-        <div>
-          <p className="text-[11px] font-semibold text-white sm:text-xs">
-            TypeScript
-          </p>
+  <div>
+    <p className="text-[11px] font-semibold text-white sm:text-xs">
+      TypeScript
+    </p>
 
-          <p className="text-[9px] text-zinc-500 sm:text-[11px]">
-            Type-safe development
-          </p>
-        </div>
-      </div>
+    <p className="text-[9px] text-zinc-500 sm:text-[11px]">
+      Type-safe development
+    </p>
+  </div>
+</div>
     </motion.div>
   </div>
 </motion.div>
