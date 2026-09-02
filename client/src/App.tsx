@@ -12,6 +12,7 @@ import Hero from "./sections/Hero";
 import Experience from "./sections/Experience";
 import Education from "./sections/Education";
 import Projects from "./sections/Projects";
+import Testimonials from "./sections/Testimonials";
 
 import ProjectDetails from "./pages/ProjectDetails";
 
@@ -34,6 +35,9 @@ const Home = () => {
       <Education />
 
       <Projects />
+
+      <Testimonials />
+
       <ContactSection/>
     </>
   );

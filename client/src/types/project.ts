@@ -1,3 +1,9 @@
+export interface Testimonial {
+  quote: string;
+  author: string;
+  role: string;
+}
+
 export interface Project {
   _id: string;
 
@@ -32,6 +38,8 @@ export interface Project {
   solutions: string[];
 
   architecture?: string;
+
+  testimonials?: Testimonial[];
 
   order: number;
 

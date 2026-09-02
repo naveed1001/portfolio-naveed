@@ -25,7 +25,7 @@ export const projects: Project[] = [
 
     githubUrl: "",
 
-    liveUrl: "",
+    liveUrl: "https://pjowco.com/",
 
     featured: true,
 
@@ -43,9 +43,16 @@ export const projects: Project[] = [
       "Owner-approval payment holds before funds are captured",
     ],
 
-    image: "",
+    image: "/projects/private-jet-one-ways/cover.png",
 
-    gallery: [],
+    gallery: [
+      "/projects/private-jet-one-ways/booking-search.png",
+      "/projects/private-jet-one-ways/flight-results.png",
+      "/projects/private-jet-one-ways/route-map.png",
+      "/projects/private-jet-one-ways/charter-estimate.png",
+      "/projects/private-jet-one-ways/admin-dashboard.png",
+      "/projects/private-jet-one-ways/admin-flights.png",
+    ],
 
     order: 1,
 
@@ -70,6 +77,15 @@ export const projects: Project[] = [
 
     architecture:
       "A React and TypeScript single-page frontend talks to a Node.js and Express REST API backed by MySQL, where relational integrity matters for aircraft, legs, bookings and ledger records. Stripe handles checkout, Connect Express payouts and invoicing, with webhooks reconciling payment state back into the booking tables. The platform runs on AWS.",
+
+    testimonials: [
+      {
+        quote:
+          "Incredible work! I was told that when this project was previously assigned to another company, this feature would take around a month to develop and implement. You managed to get it done much more efficiently.",
+        author: "Client",
+        role: "Private Jet One Ways",
+      },
+    ],
   },
 
   {
@@ -94,7 +110,7 @@ export const projects: Project[] = [
 
     githubUrl: "",
 
-    liveUrl: "",
+    liveUrl: "https://lyricsweb.com/",
 
     featured: true,
 
@@ -112,7 +128,7 @@ export const projects: Project[] = [
       "Batch-job operations console and a UGC moderation suite",
     ],
 
-    image: "",
+    image: "/projects/lyricsweb/cover.png",
 
     gallery: [],
 

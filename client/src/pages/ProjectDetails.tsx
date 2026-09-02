@@ -5,6 +5,7 @@ import {
   ExternalLink,
   Layers3,
   LoaderCircle,
+  Quote,
   Target,
 } from "lucide-react";
 
@@ -456,6 +457,74 @@ const ProjectDetails = () => {
             </div>
           </section>
         )}
+
+        {/* Client Feedback */}
+        {project.testimonials &&
+          project.testimonials
+            .length > 0 && (
+            <section className="mt-24">
+              <SectionTitle>
+                Client Feedback
+              </SectionTitle>
+
+              <div className="mt-7 grid gap-6">
+                {project.testimonials.map(
+                  (
+                    testimonial,
+                    index
+                  ) => (
+                    <motion.figure
+                      key={
+                        testimonial.quote
+                      }
+                      initial={{
+                        opacity: 0,
+                        y: 25,
+                      }}
+                      whileInView={{
+                        opacity: 1,
+                        y: 0,
+                      }}
+                      viewport={{
+                        once: true,
+                      }}
+                      transition={{
+                        duration: 0.6,
+                        delay:
+                          index * 0.08,
+                      }}
+                      className="rounded-3xl border border-[var(--border)] bg-white/[0.02] p-7 sm:p-9"
+                    >
+                      <Quote
+                        size={20}
+                        className="text-violet-400"
+                      />
+
+                      <blockquote className="mt-6 max-w-3xl border-l-2 border-violet-500/30 pl-5 text-base leading-relaxed text-[var(--foreground)] sm:text-lg">
+                        {
+                          testimonial.quote
+                        }
+                      </blockquote>
+
+                      <figcaption className="mt-6 border-t border-[var(--border)] pt-5">
+                        <p className="text-sm font-semibold">
+                          {
+                            testimonial.author
+                          }
+                        </p>
+
+                        <p className="mt-1.5 text-sm text-[var(--muted)]">
+                          {
+                            testimonial.role
+                          }
+                        </p>
+                      </figcaption>
+                    </motion.figure>
+                  )
+                )}
+              </div>
+            </section>
+          )}
 
         {/* Bottom CTA */}
         {project.liveUrl && (

@@ -335,7 +335,7 @@ const FeaturedProject = ({
   bg-white/[0.02]
 "
     >
-      <div className="grid lg:grid-cols-[1.2fr_0.8fr]">
+      <div className="grid grid-cols-1">
 
         {/* =========================
             PROJECT IMAGE
@@ -355,13 +355,6 @@ const FeaturedProject = ({
     from-violet-600/10
     via-fuchsia-500/5
     to-blue-500/10
-    min-h-[260px]
-    sm:min-h-[340px]
-    md:min-h-[400px]
-    lg:min-h-[520px]
-    xl:min-h-[560px]
-    lg:border-b-0
-    lg:border-r
   "
 >
   {project.image ? (
@@ -372,11 +365,6 @@ const FeaturedProject = ({
         w-full
         items-center
         justify-center
-        p-4
-        sm:p-6
-        md:p-8
-        lg:p-10
-        xl:p-12
       "
     >
       <img
@@ -385,51 +373,23 @@ const FeaturedProject = ({
         className="
           block
           h-auto
-          max-h-[230px]
-          max-w-full
-          rounded-xl
-          object-contain
-          shadow-2xl
+          w-full
+          object-cover
           transition-transform
           duration-700
           group-hover:scale-[1.02]
-          sm:max-h-[300px]
-          md:max-h-[350px]
-          lg:max-h-[460px]
-          xl:max-h-[500px]
         "
       />
     </div>
   ) : (
-    <ProjectVisual
-      project={project}
-      featured
-    />
+    <div className="min-h-[260px] w-full sm:min-h-[340px] lg:min-h-[420px]">
+      <ProjectVisual
+        project={project}
+        featured
+      />
+    </div>
   )}
 
-  {/* Featured Badge */}
-  <div
-    className="
-      absolute
-      left-4
-      top-4
-      rounded-full
-      border
-      border-white/10
-      bg-black/40
-      px-3
-      py-1.5
-      text-xs
-      font-semibold
-      text-white
-      shadow-lg
-      backdrop-blur-xl
-      sm:left-5
-      sm:top-5
-    "
-  >
-    Featured Project
-  </div>
 </div>
 
         {/* =========================
@@ -690,7 +650,7 @@ const ProjectCard = ({
           <img
             src={project.image}
             alt={`${project.title} project preview`}
-            className="h-full w-full object-contain transition duration-700 group-hover:scale-[1.04]"
+            className="h-full w-full object-cover object-top transition duration-700 group-hover:scale-[1.04]"
           />
         ) : (
           <ProjectVisual

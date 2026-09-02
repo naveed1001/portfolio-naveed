@@ -20,6 +20,11 @@ export interface IProject extends Document {
     challenges: string[];
     solutions: string[];
     architecture?: string;
+    testimonials: {
+        quote: string;
+        author: string;
+        role: string;
+    }[];
     createdAt: Date;
     updatedAt: Date;
     gallery: string[];
@@ -120,7 +125,18 @@ const projectSchema = new Schema<IProject>(
         gallery: {
   type: [String],
   default: [],
-}
+},
+
+        testimonials: {
+            type: [
+                {
+                    quote: String,
+                    author: String,
+                    role: String,
+                },
+            ],
+            default: [],
+        },
     },
     {
         timestamps: true,
