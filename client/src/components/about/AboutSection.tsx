@@ -1,7 +1,6 @@
 import {
   ArrowUpRight,
   Code2,
-  GraduationCap,
 } from "lucide-react";
 
 import { motion } from "framer-motion";
@@ -54,7 +53,7 @@ const AboutSection = () => {
         </motion.div>
 
         {/* Main content */}
-        <div className="mt-14 grid gap-10 lg:grid-cols-[1.2fr_0.8fr]">
+        <div className="mt-14">
           {/* Introduction */}
           <motion.div
             initial={{
@@ -127,58 +126,6 @@ const AboutSection = () => {
                 className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
               />
             </a>
-          </motion.div>
-
-          {/* Education */}
-          <motion.div
-            initial={{
-              opacity: 0,
-              x: 30,
-            }}
-            whileInView={{
-              opacity: 1,
-              x: 0,
-            }}
-            viewport={{
-              once: true,
-            }}
-            transition={{
-              duration: 0.6,
-              delay: 0.1,
-            }}
-            className="rounded-3xl border border-[var(--border)] bg-white/[0.02] p-7 sm:p-10"
-          >
-            <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-violet-500/20 bg-violet-500/10">
-              <GraduationCap
-                size={22}
-                className="text-violet-400"
-              />
-            </div>
-
-            <p className="mt-7 text-xs font-bold uppercase tracking-[0.18em] text-violet-400">
-              Education
-            </p>
-
-            <h3 className="mt-3 text-xl font-black">
-              BSc. (Hons.) Physics
-            </h3>
-
-            <p className="mt-2 text-sm font-medium text-[var(--muted)]">
-              Government College University (GCU),
-              Lahore
-            </p>
-
-            <div className="mt-6 h-px bg-[var(--border)]" />
-
-            <div className="mt-6 flex items-center justify-between text-sm">
-              <span className="text-[var(--muted)]">
-                Academic Period
-              </span>
-
-              <span className="font-semibold">
-                2016 — 2020
-              </span>
-            </div>
           </motion.div>
         </div>
       </Container>
