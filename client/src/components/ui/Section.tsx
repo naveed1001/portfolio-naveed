@@ -14,7 +14,7 @@ const Section = ({
 }: SectionProps) => {
   return (
     <section
-      className={`relative py-24 sm:py-32 ${className}`}
+      className={`relative py-12 sm:py-16 ${className}`}
       {...props}
     >
       {children}

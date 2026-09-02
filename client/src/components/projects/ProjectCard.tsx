@@ -153,80 +153,86 @@ const ProjectCard = ({
           ========================== */}
 
           <div className="mt-auto pt-6">
-            <div className="flex gap-2.5 border-t border-[var(--border)] pt-5 sm:gap-3">
+            {(project.liveUrl || project.githubUrl) && (
+              <div className="flex gap-2.5 border-t border-[var(--border)] pt-5 sm:gap-3">
 
-              {/* Live Demo */}
-              <a
-                href={project.liveUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="
-                  group/button
-                  inline-flex
-                  min-w-0
-                  flex-1
-                  items-center
-                  justify-center
-                  gap-2
-                  rounded-xl
-                  bg-[var(--foreground)]
-                  px-3
-                  py-2.5
-                  text-xs
-                  font-semibold
-                  text-[var(--background)]
-                  transition
-                  hover:opacity-90
-                  sm:px-4
-                  sm:text-sm
-                "
-              >
-                <ExternalLink
-                  size={15}
-                  className="shrink-0 sm:size-4"
-                />
+                {/* Live Demo */}
+                {project.liveUrl && (
+                  <a
+                    href={project.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="
+                      group/button
+                      inline-flex
+                      min-w-0
+                      flex-1
+                      items-center
+                      justify-center
+                      gap-2
+                      rounded-xl
+                      bg-[var(--foreground)]
+                      px-3
+                      py-2.5
+                      text-xs
+                      font-semibold
+                      text-[var(--background)]
+                      transition
+                      hover:opacity-90
+                      sm:px-4
+                      sm:text-sm
+                    "
+                  >
+                    <ExternalLink
+                      size={15}
+                      className="shrink-0 sm:size-4"
+                    />
 
-                <span className="truncate">
-                  Live Demo
-                </span>
-              </a>
+                    <span className="truncate">
+                      Live Demo
+                    </span>
+                  </a>
+                )}
 
-              {/* GitHub */}
-              <a
-                href={project.githubUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="
-                  inline-flex
-                  shrink-0
-                  items-center
-                  justify-center
-                  gap-2
-                  rounded-xl
-                  border
-                  border-[var(--border)]
-                  px-3
-                  py-2.5
-                  text-xs
-                  font-medium
-                  transition
-                  hover:border-violet-500/40
-                  hover:bg-white/5
-                  sm:px-4
-                  sm:text-sm
-                "
-                aria-label={`View ${project.title} source code`}
-              >
-                <FaGithub
-                  size={17}
-                  className="shrink-0"
-                />
+                {/* GitHub */}
+                {project.githubUrl && (
+                  <a
+                    href={project.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="
+                      inline-flex
+                      shrink-0
+                      items-center
+                      justify-center
+                      gap-2
+                      rounded-xl
+                      border
+                      border-[var(--border)]
+                      px-3
+                      py-2.5
+                      text-xs
+                      font-medium
+                      transition
+                      hover:border-violet-500/40
+                      hover:bg-white/5
+                      sm:px-4
+                      sm:text-sm
+                    "
+                    aria-label={`View ${project.title} source code`}
+                  >
+                    <FaGithub
+                      size={17}
+                      className="shrink-0"
+                    />
 
-                <span className="hidden sm:inline">
-                  GitHub
-                </span>
-              </a>
-            </div>
+                    <span className="hidden sm:inline">
+                      GitHub
+                    </span>
+                  </a>
+                )}
+              </div>
+            )}
 
             {/* Case Study */}
             <Link

@@ -32,6 +32,10 @@ const navItems = [
     href: "#about",
   },
   {
+    label: "Experience",
+    href: "#experience",
+  },
+  {
     label: "Skills",
     href: "#skills",
   },
@@ -208,7 +212,7 @@ const Navbar = () => {
 
             <div className="block">
   <p className="text-xs font-bold sm:text-sm">
-    Umar Hashir
+    Naveed Ahmed
   </p>
 
   <p className="text-[8px] uppercase tracking-[0.15em] text-[var(--muted)] sm:text-[10px] sm:tracking-[0.2em]">
@@ -261,7 +265,7 @@ const Navbar = () => {
 
             {/* GitHub */}
             <a
-              href="https://github.com/UmarHashir"
+              href="https://github.com/naveed1001"
               target="_blank"
               rel="noopener noreferrer"
               className="flex h-10 w-10 items-center justify-center rounded-xl text-[var(--muted)] transition hover:bg-[var(--card-hover)] hover:text-[var(--foreground)]"
@@ -273,7 +277,7 @@ const Navbar = () => {
 
             {/* LinkedIn */}
             <a
-              href="https://www.linkedin.com/in/umar-hashir-171218280/"
+              href="https://linkedin.com/in/naveedahmed10001"
               target="_blank"
               rel="noopener noreferrer"
               className="flex h-10 w-10 items-center justify-center rounded-xl text-[var(--muted)] transition hover:bg-[var(--card-hover)] hover:text-[var(--foreground)]"
@@ -289,7 +293,7 @@ const Navbar = () => {
 
             {/* Resume */}
             <a
-              href="/Umar-Hashir-CV.pdf"
+              href="/Naveed-Ahmed-CV.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="group inline-flex items-center gap-2 rounded-xl border border-[var(--border)] px-4 py-2.5 text-sm font-semibold transition hover:border-violet-500/40 hover:bg-violet-500/5"
@@ -375,7 +379,7 @@ const Navbar = () => {
               <div className="mt-4 grid grid-cols-2 gap-3 border-t border-[var(--border)] pt-4">
 
                 <a
-                  href="https://github.com/UmarHashir"
+                  href="https://github.com/naveed1001"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-2 rounded-xl border border-[var(--border)] py-3 text-sm"
@@ -386,7 +390,7 @@ const Navbar = () => {
                 </a>
 
                 <a
-                  href="https://www.linkedin.com/in/umar-hashir-171218280/"
+                  href="https://linkedin.com/in/naveedahmed10001"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-2 rounded-xl border border-[var(--border)] py-3 text-sm"
@@ -409,7 +413,7 @@ const Navbar = () => {
               {/* Resume */}
 
               <a
-                href="/Umar-Hashir-CV.pdf"
+                href="/Naveed-Ahmed-CV.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-3 flex items-center justify-center gap-2 rounded-xl bg-[var(--foreground)] py-3 text-sm font-semibold text-[var(--background)]"

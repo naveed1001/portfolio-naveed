@@ -1,5 +1,4 @@
 import {
-  ArrowDown,
   ArrowRight,
   Code2,
   Download,
@@ -19,7 +18,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative flex min-h-screen items-center overflow-hidden pt-24"
+      className="relative flex min-h-screen items-center overflow-hidden pt-18"
     >
       {/* Background */}
       <div className="absolute inset-0 -z-10">
@@ -41,7 +40,7 @@ const Hero = () => {
       />
 
       <Container>
-        <div className="grid items-center gap-14 py-20 lg:grid-cols-[1.2fr_0.8fr] lg:py-28">
+        <div className="grid items-center gap-14 pb-12 pt-10 lg:grid-cols-[1.2fr_0.8fr] lg:pb-16 lg:pt-12">
           {/* Left Content */}
           <motion.div
             initial={{
@@ -66,22 +65,20 @@ const Hero = () => {
             </div>
 
             {/* Main Heading */}
-            <h1 className="max-w-4xl text-4xl font-bold leading-[1.08] tracking-tight text-[var(--foreground)] sm:text-5xl md:text-6xl lg:text-7xl">
-              Building modern
-              <span className="block">
-                web experiences with{" "}
-                <span className="bg-gradient-to-r from-violet-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
-                  MERN & TypeScript.
-                </span>
+            <h1 className="max-w-4xl whitespace-nowrap text-3xl font-bold leading-[1.08] tracking-tight text-[var(--foreground)] sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl">
+              Full-stack,{" "}
+              <span className="bg-gradient-to-r from-violet-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
+                at scale.
               </span>
             </h1>
 
             {/* Description */}
             <p className="mt-7 max-w-2xl text-base leading-7 text-[var(--muted)] sm:text-lg">
-              I'm Umar Hashir, a MERN Stack Developer focused on
-              building scalable, responsive and user-friendly web
-              applications using modern technologies and clean
-              architecture.
+              I'm Naveed Ahmed, a Full-Stack MERN Developer with 3+
+              years of professional experience, currently a Senior MERN
+              Stack Developer and Team Lead at TheCloudOps, architecting
+              scalable web applications and enterprise platforms from
+              concept to production.
             </p>
 
             {/* Tags */}
@@ -90,8 +87,9 @@ const Hero = () => {
                 "TypeScript",
                 "React",
                 "Node.js",
-                "Express",
+                "NestJS",
                 "MongoDB",
+                "AWS",
               ].map((technology) => (
                 <Badge key={technology}>
                   {technology}
@@ -114,7 +112,7 @@ const Hero = () => {
               </a>
 
               <a
-                href="/Umar-Hashir-CV.pdf"
+                href="/Naveed-Ahmed-CV.pdf"
                 download
                 className="inline-flex items-center gap-2 rounded-xl border border-[var(--border)] bg-[var(--card)] px-5 py-3 text-sm font-semibold text-[var(--foreground)] transition-all hover:bg-[var(--card-hover)]"
               >
@@ -131,7 +129,7 @@ const Hero = () => {
               </span>
 
               <a
-                href="https://github.com/"
+                href="https://github.com/naveed1001"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex h-10 w-10 items-center justify-center rounded-xl border border-[var(--border)] bg-[var(--card)] text-[var(--muted)] transition-all hover:-translate-y-1 hover:text-[var(--foreground)]"
@@ -140,7 +138,7 @@ const Hero = () => {
               </a>
 
               <a
-                href="https://www.linkedin.com/"
+                href="https://linkedin.com/in/naveedahmed10001"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex h-10 w-10 items-center justify-center rounded-xl border border-[var(--border)] bg-[var(--card)] text-[var(--muted)] transition-all hover:-translate-y-1 hover:text-[var(--foreground)]"
@@ -227,7 +225,7 @@ const Hero = () => {
     <p className="pl-4 text-zinc-400 sm:pl-5">
       name:
       <span className="text-emerald-400">
-        {" "}“Umar Hashir”
+        {" "}“Naveed Ahmed”
       </span>
       ,
     </p>
@@ -235,7 +233,7 @@ const Hero = () => {
     <p className="pl-4 text-zinc-400 sm:pl-5">
       role:
       <span className="text-emerald-400">
-        {" "}“MERN Developer”
+        {" "}“Senior MERN Developer”
       </span>
       ,
     </p>
@@ -243,15 +241,15 @@ const Hero = () => {
     <p className="pl-4 text-zinc-400 sm:pl-5">
       stack:
       <span className="text-emerald-400">
-        {" "}“TypeScript”
+        {" "}“MERN + TypeScript”
       </span>
       ,
     </p>
 
     <p className="pl-4 text-zinc-400 sm:pl-5">
-      passion:
+      focus:
       <span className="text-emerald-400">
-        {" "}“Building”
+        {" "}“Scalable Systems”
       </span>
     </p>
 
@@ -312,11 +310,11 @@ const Hero = () => {
 
         <div>
           <p className="text-[11px] font-semibold text-white sm:text-xs">
-            Clean Code
+            Team Lead
           </p>
 
           <p className="text-[9px] text-zinc-500 sm:text-[11px]">
-            Scalable architecture
+            3+ years experience
           </p>
         </div>
       </div>
@@ -358,11 +356,11 @@ const Hero = () => {
 
   <div>
     <p className="text-[11px] font-semibold text-white sm:text-xs">
-      TypeScript
+      Cloud Native
     </p>
 
     <p className="text-[9px] text-zinc-500 sm:text-[11px]">
-      Type-safe development
+      AWS, Docker & Redis
     </p>
   </div>
 </div>
@@ -370,25 +368,6 @@ const Hero = () => {
   </div>
 </motion.div>
         </div>
-
-        {/* Scroll Indicator */}
-        <motion.a
-          href="#about"
-          animate={{
-            y: [0, 7, 0],
-          }}
-          transition={{
-            duration: 2,
-            repeat: Infinity,
-          }}
-          className="mx-auto mb-8 flex w-fit flex-col items-center gap-2 text-[var(--muted)]"
-        >
-          <span className="text-xs font-medium uppercase tracking-[0.2em]">
-            Explore
-          </span>
-
-          <ArrowDown size={16} />
-        </motion.a>
       </Container>
     </section>
   );

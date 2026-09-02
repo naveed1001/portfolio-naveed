@@ -3,6 +3,7 @@ import {
   ExternalLink,
   Layers3,
   LoaderCircle,
+  RefreshCw,
   Sparkles,
 } from "lucide-react";
 
@@ -53,11 +54,18 @@ const Projects = () => {
     setSelectedTechnology,
   ] = useState("All");
 
+  const [
+    reloadKey,
+    setReloadKey,
+  ] = useState(0);
+
   useEffect(() => {
     const fetchProjects =
       async () => {
         try {
           setLoading(true);
+
+          setError("");
 
           const data =
             await getProjects();
@@ -78,7 +86,7 @@ const Projects = () => {
       };
 
     fetchProjects();
-  }, []);
+  }, [reloadKey]);
 
   const technologies =
     useMemo(() => {
@@ -225,6 +233,20 @@ const Projects = () => {
             <p className="text-sm text-red-300">
               {error}
             </p>
+
+            <button
+              type="button"
+              onClick={() =>
+                setReloadKey(
+                  (key) => key + 1
+                )
+              }
+              className="mt-4 inline-flex items-center gap-2 rounded-xl border border-[var(--border)] px-4 py-2.5 text-xs font-semibold transition hover:border-violet-500/30 hover:bg-white/5 sm:text-sm"
+            >
+              <RefreshCw size={15} />
+
+              Try again
+            </button>
           </div>
         )}
 
@@ -540,61 +562,65 @@ const FeaturedProject = ({
           <div className="mt-8 flex flex-wrap gap-2.5 sm:gap-3">
 
             {/* Live Demo */}
-            <a
-              href={project.liveUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="
-                inline-flex
-                items-center
-                gap-2
-                rounded-xl
-                bg-[var(--foreground)]
-                px-4
-                py-2.5
-                text-xs
-                font-semibold
-                text-[var(--background)]
-                transition
-                hover:opacity-90
-                sm:px-5
-                sm:py-3
-                sm:text-sm
-              "
-            >
-              <ExternalLink size={16} />
+            {project.liveUrl && (
+              <a
+                href={project.liveUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="
+                  inline-flex
+                  items-center
+                  gap-2
+                  rounded-xl
+                  bg-[var(--foreground)]
+                  px-4
+                  py-2.5
+                  text-xs
+                  font-semibold
+                  text-[var(--background)]
+                  transition
+                  hover:opacity-90
+                  sm:px-5
+                  sm:py-3
+                  sm:text-sm
+                "
+              >
+                <ExternalLink size={16} />
 
-              Live Demo
-            </a>
+                Live Demo
+              </a>
+            )}
 
             {/* GitHub */}
-            <a
-              href={project.githubUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="
-                inline-flex
-                items-center
-                gap-2
-                rounded-xl
-                border
-                border-[var(--border)]
-                px-4
-                py-2.5
-                text-xs
-                font-semibold
-                transition
-                hover:border-violet-500/30
-                hover:bg-white/5
-                sm:px-5
-                sm:py-3
-                sm:text-sm
-              "
-            >
-              <FaGithub size={16} />
+            {project.githubUrl && (
+              <a
+                href={project.githubUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="
+                  inline-flex
+                  items-center
+                  gap-2
+                  rounded-xl
+                  border
+                  border-[var(--border)]
+                  px-4
+                  py-2.5
+                  text-xs
+                  font-semibold
+                  transition
+                  hover:border-violet-500/30
+                  hover:bg-white/5
+                  sm:px-5
+                  sm:py-3
+                  sm:text-sm
+                "
+              >
+                <FaGithub size={16} />
 
-              GitHub
-            </a>
+                GitHub
+              </a>
+            )}
 
             {/* Case Study */}
             <Link
@@ -716,28 +742,34 @@ const ProjectCard = ({
             ))}
         </div>
 
-        <div className="mt-6 flex gap-3 border-t border-[var(--border)] pt-5">
-          <a
-            href={project.liveUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex flex-1 items-center justify-center gap-2 rounded-xl bg-[var(--foreground)] px-3 py-2.5 text-xs font-semibold text-[var(--background)] transition hover:opacity-90"
-          >
-            <ExternalLink size={14} />
+        {(project.liveUrl || project.githubUrl) && (
+          <div className="mt-6 flex gap-3 border-t border-[var(--border)] pt-5">
+            {project.liveUrl && (
+              <a
+                href={project.liveUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex flex-1 items-center justify-center gap-2 rounded-xl bg-[var(--foreground)] px-3 py-2.5 text-xs font-semibold text-[var(--background)] transition hover:opacity-90"
+              >
+                <ExternalLink size={14} />
 
-            Live Demo
-          </a>
+                Live Demo
+              </a>
+            )}
 
-          <a
-            href={project.githubUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center justify-center gap-2 rounded-xl border border-[var(--border)] px-4 py-2.5 text-xs font-semibold transition hover:border-violet-500/30"
-            aria-label={`${project.title} GitHub repository`}
-          >
-            <FaGithub size={14} />
-          </a>
-        </div>
+            {project.githubUrl && (
+              <a
+                href={project.githubUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 rounded-xl border border-[var(--border)] px-4 py-2.5 text-xs font-semibold transition hover:border-violet-500/30"
+                aria-label={`${project.title} GitHub repository`}
+              >
+                <FaGithub size={14} />
+              </a>
+            )}
+          </div>
+        )}
       </div>
     </motion.article>
   );

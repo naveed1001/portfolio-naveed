@@ -12,7 +12,7 @@ const AboutSection = () => {
   return (
     <section
       id="about"
-      className="relative overflow-hidden py-24 sm:py-32"
+      className="relative overflow-hidden py-12 sm:py-16"
     >
       {/* Background decoration */}
       <div className="pointer-events-none absolute left-[-120px] top-1/3 h-72 w-72 rounded-full bg-violet-500/10 blur-[120px]" />
@@ -80,36 +80,39 @@ const AboutSection = () => {
               />
 
               <h3 className="text-lg font-bold">
-                MERN Stack Developer
+                Senior MERN Stack Developer
               </h3>
             </div>
 
             <div className="mt-7 space-y-5 text-sm leading-8 text-[var(--muted)] sm:text-base">
               <p>
-                I'm a MERN Stack Developer focused on
-                building modern, responsive and
-                scalable web applications using
-                MongoDB, Express.js, React and
-                Node.js.
+                I'm Naveed Ahmed, a Senior MERN Stack
+                Developer and Team Lead at TheCloudOps
+                with 3+ years of professional
+                experience building scalable web
+                applications across React, Node.js,
+                NestJS, MongoDB and MySQL.
               </p>
 
               <p>
-                I enjoy turning ideas into complete
-                products — from designing responsive
-                interfaces and reusable components to
-                developing REST APIs, authentication
-                systems, database structures and
-                production-ready applications.
+                I build production platforms end to
+                end — a private jet charter
+                marketplace with a concurrency-safe
+                booking engine and full Stripe
+                payments, and an ad-supported lyrics
+                platform serving an 11M+ document
+                catalog.
               </p>
 
               <p>
-                Alongside web development, I have a
-                strong foundation in programming
-                concepts including Object-Oriented
-                Programming and Data Structures &
-                Algorithms. This helps me approach
-                problems with structured thinking
-                rather than only focusing on the UI.
+                Day to day I lead the development team
+                and act as the primary technical
+                contact for clients, translating
+                business requirements into technical
+                solutions and tuning systems for
+                performance and scale — including
+                cutting API query times from 300ms to
+                50ms.
               </p>
             </div>
 
@@ -157,11 +160,12 @@ const AboutSection = () => {
             </p>
 
             <h3 className="mt-3 text-xl font-black">
-              BS Information Technology
+              BSc. (Hons.) Physics
             </h3>
 
             <p className="mt-2 text-sm font-medium text-[var(--muted)]">
-              Ghazi University
+              Government College University (GCU),
+              Lahore
             </p>
 
             <div className="mt-6 h-px bg-[var(--border)]" />
@@ -172,7 +176,7 @@ const AboutSection = () => {
               </span>
 
               <span className="font-semibold">
-                2023 — 2027
+                2016 — 2020
               </span>
             </div>
           </motion.div>

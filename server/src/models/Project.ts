@@ -9,8 +9,8 @@ export interface IProject extends Document {
     description: string;
     technologies: string[];
     category: string;
-    githubUrl: string;
-    liveUrl: string;
+    githubUrl?: string;
+    liveUrl?: string;
     featured: boolean;
     year: number;
     features: string[];
@@ -62,13 +62,15 @@ const projectSchema = new Schema<IProject>(
 
         githubUrl: {
             type: String,
-            required: true,
+            required: false,
+            default: "",
             trim: true,
         },
 
         liveUrl: {
             type: String,
-            required: true,
+            required: false,
+            default: "",
             trim: true,
         },
 

@@ -7,259 +7,200 @@ dotenv.config();
 
 const projects = [
   {
-    title: "Ecommerce Store (Cartify)",
+    title: "Private Jet One Ways",
 
-    slug: "cartify",
+    slug: "private-jet-one-ways",
 
     description:
-      "A modern full-stack e-commerce platform built with the MERN stack, featuring product browsing, search and filters, authentication, shopping cart, wishlist, coupons, checkout, order management, payments, and a comprehensive admin dashboard for managing products, users, categories, orders, and sales analytics.",
+      "A full-stack private jet charter marketplace that connects operators, brokers and flyers on a single aviation management platform. It handles the entire booking lifecycle, from searching one-way legs to signing the charter contract and settling payment. Stripe powers the money movement end to end, including operator payouts and tokenized broker invoicing.",
 
     technologies: [
-      "MongoDB",
-      "Express.js",
       "React",
-      "Node.js",
       "TypeScript",
+      "Node.js",
+      "Express.js",
+      "MySQL",
+      "Stripe",
+      "AWS",
     ],
 
-    category: "MERN",
+    category: "Full-Stack",
 
-    githubUrl:
-      "https://github.com/UmarHashir/Ecommerce-mern-app",
+    githubUrl: "",
 
-    liveUrl:
-      "https://ecommerce-mern-app-liard.vercel.app/",
+    liveUrl: "",
 
     featured: true,
 
-    year: 2026,
+    year: 2025,
 
     features: [
-  "JWT authentication and protected routes",
-  "Product search, filtering and category browsing",
-  "Shopping cart and wishlist",
-  "Coupon and discount system",
-  "Checkout and payment integration",
-  "Order creation and order management",
-  "Admin product and category management",
-  "User management",
-  "Sales analytics dashboard",
-],
+      "Charter marketplace connecting operators, brokers and flyers",
+      "Real-time flight booking and management system",
+      "Authorize-then-capture Stripe checkout with SHA-256 idempotency keys",
+      "Stripe Connect Express operator payouts with instant-payout auto-fallback",
+      "Tokenized broker invoicing",
+      "Concurrency-safe booking engine with 15-minute soft locks that prevent double-booking",
+      "Six-step checkout with in-app PDF contract signing",
+      "Card, wire transfer and account-balance payment methods",
+      "Owner-approval payment holds before funds are captured",
+    ],
 
-    image: "/projects/cartify/cover.png",
+    image: "",
+
+    gallery: [],
 
     order: 1,
+
     overview:
-  "Cartify is a full-stack e-commerce platform designed to provide a complete online shopping experience. The application includes customer-facing shopping functionality together with an administrative dashboard for managing the business.",
+      "Private Jet One Ways is the platform I lead end to end at TheCloudOps: a full-stack aviation management product built with React, Node.js and Express on a MySQL data layer. Operators publish one-way availability, brokers invoice their own clients, and flyers search, hold and book an aircraft in one flow. The hard parts are not the screens but the guarantees behind them, keeping a single aircraft from being sold twice while a checkout is in flight, and making sure money is only captured once the owner has approved the trip and the contract has been signed.",
 
-challenges: [
-  "Managing complex shopping cart and order state",
-  "Implementing secure authentication and protected resources",
-  "Building an admin dashboard with multiple management modules",
-  "Handling checkout and payment workflows",
-],
+    challenges: [
+      "Preventing double-booking when several flyers start checkout on the same aircraft at the same time",
+      "Moving money safely across three parties, flyers paying in, operators being paid out and brokers invoicing their own clients",
+      "Guaranteeing that a retried or duplicated payment request never charges a customer twice",
+      "Keeping a six-step checkout coherent when it mixes contract signing, multiple payment methods and an owner approval step",
+      "Serving as the single technical point of contact for the client while requirements evolved during the build",
+    ],
 
-solutions: [
-  "Designed reusable React components and structured application state",
-  "Implemented JWT-based authentication and protected API routes",
-  "Created separate admin management modules for products, users, categories and orders",
-  "Integrated checkout and payment processing into the order workflow",
-],
+    solutions: [
+      "Built a concurrency-safe booking engine around 15-minute soft locks so a leg is reserved for the duration of a checkout and released automatically if it is abandoned",
+      "Implemented an authorize-then-capture Stripe flow with owner-approval holds, so funds are only captured after the trip is confirmed",
+      "Derived SHA-256 idempotency keys for every payment intent so replays and network retries collapse onto a single charge",
+      "Integrated Stripe Connect Express for operator payouts with an automatic fallback from instant payouts to standard transfers when instant is unavailable",
+      "Split the checkout into six explicit steps with in-app PDF contract signing and card, wire and balance payment paths, each recoverable on its own",
+    ],
 
-architecture:
-  "React frontend communicates with an Express.js REST API. The Node.js backend handles authentication, business logic and database operations through Mongoose and MongoDB.",
+    architecture:
+      "A React and TypeScript single-page frontend talks to a Node.js and Express REST API backed by MySQL, where relational integrity matters for aircraft, legs, bookings and ledger records. Stripe handles checkout, Connect Express payouts and invoicing, with webhooks reconciling payment state back into the booking tables. The platform runs on AWS.",
   },
 
   {
-    title: "Expense Tracker",
+    title: "LyricsWeb",
 
-    slug: "expense-tracker",
+    slug: "lyricsweb",
 
     description:
-      "A modern full-stack Expense Tracker built with the MERN stack, featuring expense and income management, monthly budgets, savings goals, analytics, spending insights, authentication, Cloudinary image uploads, and a responsive dark-mode dashboard.",
+      "An ad-supported music lyrics platform serving an 11M+ document catalog of songs, artists and albums. The public site is built for organic search, with SEO-optimized ISR and RSC pages, JSON-LD structured data and Core Web Vitals tuning, while revenue comes from Google Ad Manager targeting and PubGuru header bidding. Behind it sits an AI content pipeline and a full admin CMS.",
 
     technologies: [
+      "Next.js",
+      "TypeScript",
+      "NestJS",
       "MongoDB",
-      "Express.js",
-      "React",
-      "Node.js",
-      "Cloudinary",
+      "Redis",
     ],
 
-    category: "MERN",
+    category: "Full-Stack",
 
-    githubUrl:
-      "https://github.com/UmarHashir/Expense-Tracker-mern-app",
+    githubUrl: "",
 
-    liveUrl:
-      "https://expense-tracker-mern-app-ten.vercel.app/",
+    liveUrl: "",
 
     featured: true,
 
-    year: 2026,
+    year: 2025,
 
     features: [
-  "JWT authentication",
-  "Income and expense management",
-  "Monthly budgets",
-  "Savings goals",
-  "Financial analytics",
-  "Spending insights",
-  "Cloudinary image uploads",
-  "Responsive dark-mode dashboard",
-],
+      "11M+ document catalog of songs, artists and albums",
+      "SEO-optimized ISR and RSC pages with JSON-LD structured data",
+      "Core Web Vitals tuning across the public catalog",
+      "AI content pipelines for song meanings and music news using Gemini and Vertex AI batch jobs",
+      "BullMQ job queues driving background generation and ingestion work",
+      "AI-powered ad targeting through Google Ad Manager key-value pairs",
+      "PubGuru header bidding rolled out to production in phases",
+      "Admin CMS with role-based access control and AI article generation and scheduling",
+      "Batch-job operations console and a UGC moderation suite",
+    ],
 
     image: "",
+
+    gallery: [],
 
     order: 2,
+
     overview:
-  "Expense Tracker is a full-stack personal finance application designed to help users manage income, expenses, budgets and savings goals while providing visual insights into their spending.",
+      "LyricsWeb is an ad-supported music lyrics platform where I drive full-stack development at TheCloudOps. The catalog is the product, more than 11 million song, artist and album documents that have to be crawlable, fast and monetized at the same time. My work spans the rendering strategy for those pages, the AI pipelines that enrich them with song meanings and news, the ad stack that pays for them, and the admin CMS the editorial team uses to run the whole thing.",
 
-challenges: [
-  "Designing useful financial summaries",
-  "Managing monthly budgets and savings goals",
-  "Presenting financial information clearly",
-  "Handling image uploads",
-],
+    challenges: [
+      "Query times of around 300ms against a 7M+ document catalog spread across scattered staging collections",
+      "Rendering millions of catalog pages in a way that is both search-friendly and fast enough to pass Core Web Vitals",
+      "Generating and scheduling AI content at catalog scale without blocking request-time work",
+      "Rolling out header bidding and richer ad targeting on a live revenue-generating site without disrupting existing demand",
+      "Giving a non-technical editorial team safe control over publishing, batch jobs and user-generated content",
+    ],
 
-solutions: [
-  "Created reusable dashboard components for financial summaries",
-  "Structured financial records around categories and time periods",
-  "Added analytics and spending insights",
-  "Integrated Cloudinary for image upload functionality",
-],
+    solutions: [
+      "Consolidated the 7M+ document catalog from scattered staging collections into 3 core MongoDB collections with indexed ID-based lookups, cutting API query times by 90% from 300ms to 50ms",
+      "Served catalog pages through Next.js ISR and React Server Components with JSON-LD structured data, then tuned Core Web Vitals against real page weight",
+      "Moved song meaning and news generation into Gemini and Vertex AI batch jobs orchestrated by BullMQ queues, with Redis backing queue state and caching",
+      "Shipped Google Ad Manager key-value targeting and PubGuru header bidding to production in phases so revenue could be measured at each step",
+      "Built an admin CMS with role-based access control, AI article generation and scheduling, a batch-job operations console and a UGC moderation suite",
+    ],
 
-architecture:
-  "The React frontend consumes a REST API built with Node.js and Express. MongoDB stores users and financial records while Cloudinary handles uploaded media.",
+    architecture:
+      "A Next.js and TypeScript frontend renders the catalog with ISR and React Server Components, backed by a NestJS API over MongoDB. Redis provides caching and backs the BullMQ queues that run AI generation and large migration jobs, while Gemini and Vertex AI batch jobs supply generated content. Ad delivery sits in front through Google Ad Manager with PubGuru header bidding.",
   },
 
   {
-    title: "Notes App",
+    title: "Bike Inventory System",
 
-    slug: "notes-app",
-
-    description:
-      "A modern full-stack Notes App built with the MERN stack, featuring JWT authentication, protected routes, user-specific notes, complete CRUD operations, search, responsive dashboard, and a polished UI with Tailwind CSS and Framer Motion.",
-
-    technologies: [
-      "MongoDB",
-      "Express.js",
-      "React",
-      "Node.js",
-      "JWT",
-      "Tailwind CSS",
-      "Framer Motion",
-    ],
-
-    category: "MERN",
-
-    githubUrl:
-      "https://github.com/UmarHashir/Notes-app-MERN",
-
-    liveUrl:
-      "https://notes-app-mern-three.vercel.app/",
-
-    featured: true,
-
-    year: 2026,
-
-    features: [
-  "JWT authentication",
-  "Protected routes",
-  "User-specific notes",
-  "Create, update and delete notes",
-  "Search functionality",
-  "Responsive dashboard",
-  "Tailwind CSS UI",
-  "Framer Motion animations",
-],
-
-    image: "",
-
-    order: 3,
-    overview:
-  "Notes App is a secure full-stack productivity application that allows authenticated users to create, manage and search their personal notes.",
-
-challenges: [
-  "Protecting user-specific data",
-  "Implementing authentication and protected routes",
-  "Creating a responsive notes dashboard",
-],
-
-solutions: [
-  "Implemented JWT authentication",
-  "Added protected frontend and backend routes",
-  "Created complete CRUD operations for notes",
-  "Built a responsive interface with Tailwind CSS and Framer Motion",
-],
-
-architecture:
-  "React communicates with an Express REST API. JWT authentication protects resources and MongoDB stores user-specific notes.",
-  },
-
-  {
-    title: "Todo App",
-
-    slug: "todo-app",
+    slug: "bike-inventory-system",
 
     description:
-      "A full-stack Todo application built with MongoDB, Express.js, React, and Node.js. Features include creating, updating, completing, and deleting tasks, with a responsive UI, RESTful APIs, Axios integration, MongoDB persistence, error handling, and live deployment.",
+      "A warehouse operations system built at OIOI Group to optimize how bike stock is tracked and moved. It combines MySQL-backed inventory tracking with secure CRUD APIs and real-time transfer logging, so every movement between locations is recorded as it happens. The application was deployed on AWS for scalability and high availability.",
 
     technologies: [
-      "MongoDB",
-      "Express.js",
-      "React",
       "Node.js",
-      "Axios",
-      "REST API",
+      "Express.js",
+      "MySQL",
+      "React",
     ],
 
-    category: "MERN",
+    category: "Full-Stack",
 
-    githubUrl:
-      "https://github.com/UmarHashir/todo-mern-app",
+    githubUrl: "",
 
-    liveUrl:
-      "https://todo-mern-app-theta.vercel.app/",
+    liveUrl: "",
 
     featured: false,
 
-    year: 2026,
+    year: 2025,
 
     features: [
-  "Create tasks",
-  "Update tasks",
-  "Complete tasks",
-  "Delete tasks",
-  "RESTful API",
-  "Axios API integration",
-  "MongoDB persistence",
-  "Error handling",
-  "Responsive interface",
-],
+      "MySQL-backed inventory tracking across warehouse locations",
+      "Secure CRUD APIs for stock records",
+      "Real-time transfer logging for every stock movement",
+      "RESTful Express.js API consumed by a React interface",
+      "Relational schema modelling bikes, locations and transfers",
+      "Cloud deployment on AWS for scalability and high availability",
+    ],
 
     image: "",
 
-    order: 4,
+    gallery: [],
+
+    order: 3,
+
     overview:
-  "Expense Tracker is a full-stack personal finance application designed to help users manage income, expenses, budgets and savings goals while providing visual insights into their spending.",
+      "The Bike Inventory System was built during my time as a MERN Stack Developer at OIOI Group to optimize warehouse operations. Instead of stock levels living in spreadsheets, the system keeps inventory in MySQL and records each transfer between locations as it happens, so warehouse staff and management look at the same numbers. I built the API and data layer and deployed the result on AWS.",
 
-challenges: [
-  "Designing useful financial summaries",
-  "Managing monthly budgets and savings goals",
-  "Presenting financial information clearly",
-  "Handling image uploads",
-],
+    challenges: [
+      "Keeping stock counts accurate while units move between warehouse locations",
+      "Exposing inventory operations over an API without leaving write endpoints unprotected",
+      "Producing a transfer history that management can audit after the fact",
+      "Running the system reliably enough for day-to-day warehouse use",
+    ],
 
-solutions: [
-  "Created reusable dashboard components for financial summaries",
-  "Structured financial records around categories and time periods",
-  "Added analytics and spending insights",
-  "Integrated Cloudinary for image upload functionality",
-],
+    solutions: [
+      "Modelled inventory in MySQL so stock, locations and transfers stay relationally consistent",
+      "Built secure CRUD APIs in Express.js with validation and authentication on every write path",
+      "Added real-time transfer logging so each movement is written as an auditable record",
+      "Deployed and managed the application on AWS to ensure scalability and high availability",
+    ],
 
-architecture:
-  "The React frontend consumes a REST API built with Node.js and Express. MongoDB stores users and financial records while Cloudinary handles uploaded media.",
+    architecture:
+      "A React frontend consumes a REST API built with Node.js and Express, with MySQL as the system of record for inventory and transfer history. The stack is deployed on AWS, where the cloud setup provides the scalability and availability the warehouse workflow depends on.",
   },
 ];
 

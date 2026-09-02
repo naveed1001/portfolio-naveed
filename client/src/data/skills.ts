@@ -1,18 +1,24 @@
 export interface Skill {
   name: string;
-  category: "Frontend" | "Backend" | "Database" | "Tools" | "CS";
+  category:
+    | "Frontend"
+    | "Backend"
+    | "Database"
+    | "DevOps"
+    | "Tools"
+    | "CS";
   level: "Primary" | "Working Knowledge" | "Foundation";
 }
 
 export const skills: Skill[] = [
   // Frontend
   {
-    name: "React.js",
+    name: "HTML",
     category: "Frontend",
     level: "Primary",
   },
   {
-    name: "TypeScript",
+    name: "CSS",
     category: "Frontend",
     level: "Primary",
   },
@@ -22,12 +28,17 @@ export const skills: Skill[] = [
     level: "Primary",
   },
   {
-    name: "HTML5",
+    name: "TypeScript",
     category: "Frontend",
     level: "Primary",
   },
   {
-    name: "CSS3",
+    name: "React.js",
+    category: "Frontend",
+    level: "Primary",
+  },
+  {
+    name: "Next.js",
     category: "Frontend",
     level: "Primary",
   },
@@ -35,6 +46,16 @@ export const skills: Skill[] = [
     name: "Tailwind CSS",
     category: "Frontend",
     level: "Primary",
+  },
+  {
+    name: "Redux Toolkit",
+    category: "Frontend",
+    level: "Working Knowledge",
+  },
+  {
+    name: "Bootstrap",
+    category: "Frontend",
+    level: "Working Knowledge",
   },
 
   // Backend
@@ -49,12 +70,12 @@ export const skills: Skill[] = [
     level: "Primary",
   },
   {
-    name: "REST APIs",
+    name: "NestJS",
     category: "Backend",
     level: "Primary",
   },
   {
-    name: "JWT Authentication",
+    name: "REST APIs",
     category: "Backend",
     level: "Primary",
   },
@@ -66,57 +87,67 @@ export const skills: Skill[] = [
     level: "Primary",
   },
   {
-    name: "Mongoose",
+    name: "MySQL",
     category: "Database",
     level: "Primary",
   },
+  {
+    name: "PostgreSQL",
+    category: "Database",
+    level: "Working Knowledge",
+  },
+  {
+    name: "Redis",
+    category: "Database",
+    level: "Working Knowledge",
+  },
+
+  // DevOps & Cloud
+  {
+    name: "AWS",
+    category: "DevOps",
+    level: "Working Knowledge",
+  },
+  {
+    name: "Docker",
+    category: "DevOps",
+    level: "Working Knowledge",
+  },
+  {
+    name: "CI/CD Pipelines",
+    category: "DevOps",
+    level: "Working Knowledge",
+  },
+  {
+    name: "RabbitMQ",
+    category: "DevOps",
+    level: "Working Knowledge",
+  },
 
   // Tools
+  {
+    name: "Git",
+    category: "Tools",
+    level: "Primary",
+  },
   {
     name: "GitHub",
     category: "Tools",
     level: "Primary",
   },
   {
-    name: "Axios",
-    category: "Tools",
-    level: "Primary",
-  },
-  {
-    name: "Vercel",
+    name: "Postman",
     category: "Tools",
     level: "Working Knowledge",
   },
   {
-    name: "Render",
+    name: "JIRA",
     category: "Tools",
     level: "Working Knowledge",
   },
-
-  // Computer Science
   {
-    name: "C++",
-    category: "CS",
-    level: "Foundation",
-  },
-  {
-    name: "OOP",
-    category: "CS",
-    level: "Foundation",
-  },
-  {
-    name: "Data Structures",
-    category: "CS",
-    level: "Foundation",
-  },
-  {
-    name: "Algorithms",
-    category: "CS",
-    level: "Foundation",
-  },
-  {
-    name: "DAA",
-    category: "CS",
-    level: "Foundation",
+    name: "ClickUp",
+    category: "Tools",
+    level: "Working Knowledge",
   },
 ];

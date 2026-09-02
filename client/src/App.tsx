@@ -9,6 +9,7 @@ import PortfolioLayout from "./components/layout/PortfolioLayout";
 import Hero from "./sections/Hero";
 //import About from "./sections/About";
 //import Skills from "./sections/Skills";
+import Experience from "./sections/Experience";
 import Education from "./sections/Education";
 import Projects from "./sections/Projects";
 
@@ -25,6 +26,8 @@ const Home = () => {
 
       {/* <About /> */}
       <AboutSection/>
+
+      <Experience />
       {/* <Skills /> */}
       <SkillsSection/>
       {/* <DevelopmentProcess/> */}

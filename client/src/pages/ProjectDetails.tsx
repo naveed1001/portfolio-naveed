@@ -174,7 +174,14 @@ const ProjectDetails = () => {
         </motion.div>
 
         {/* Hero */}
-        <div className="mt-10 grid gap-12 lg:grid-cols-[1fr_0.42fr] lg:items-end">
+        <div
+          className={`mt-10 grid gap-12 ${
+            project.liveUrl ||
+            project.githubUrl
+              ? "lg:grid-cols-[1fr_0.42fr] lg:items-end"
+              : ""
+          }`}
+        >
           <motion.div
             initial={{
               opacity: 0,
@@ -224,43 +231,49 @@ const ProjectDetails = () => {
           </motion.div>
 
           {/* Actions */}
-          <motion.div
-            initial={{
-              opacity: 0,
-              y: 25,
-            }}
-            animate={{
-              opacity: 1,
-              y: 0,
-            }}
-            transition={{
-              duration: 0.6,
-              delay: 0.1,
-            }}
-            className="flex flex-wrap gap-3 lg:justify-end"
-          >
-            <a
-              href={project.liveUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-xl bg-[var(--foreground)] px-5 py-3 text-sm font-semibold text-[var(--background)] transition hover:opacity-90"
+          {(project.liveUrl || project.githubUrl) && (
+            <motion.div
+              initial={{
+                opacity: 0,
+                y: 25,
+              }}
+              animate={{
+                opacity: 1,
+                y: 0,
+              }}
+              transition={{
+                duration: 0.6,
+                delay: 0.1,
+              }}
+              className="flex flex-wrap gap-3 lg:justify-end"
             >
-              <ExternalLink size={16} />
+              {project.liveUrl && (
+                <a
+                  href={project.liveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-xl bg-[var(--foreground)] px-5 py-3 text-sm font-semibold text-[var(--background)] transition hover:opacity-90"
+                >
+                  <ExternalLink size={16} />
 
-              Live Demo
-            </a>
+                  Live Demo
+                </a>
+              )}
 
-            <a
-              href={project.githubUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-xl border border-[var(--border)] px-5 py-3 text-sm font-semibold transition hover:border-violet-500/30 hover:bg-white/5"
-            >
-              <FaGithub size={16} />
+              {project.githubUrl && (
+                <a
+                  href={project.githubUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-xl border border-[var(--border)] px-5 py-3 text-sm font-semibold transition hover:border-violet-500/30 hover:bg-white/5"
+                >
+                  <FaGithub size={16} />
 
-              GitHub
-            </a>
-          </motion.div>
+                  GitHub
+                </a>
+              )}
+            </motion.div>
+          )}
         </div>
 
         {/* Cover */}
@@ -445,45 +458,47 @@ const ProjectDetails = () => {
         )}
 
         {/* Bottom CTA */}
-        <motion.div
-          initial={{
-            opacity: 0,
-            y: 25,
-          }}
-          whileInView={{
-            opacity: 1,
-            y: 0,
-          }}
-          viewport={{
-            once: true,
-          }}
-          className="mt-24 rounded-3xl border border-violet-500/20 bg-gradient-to-br from-violet-500/[0.08] via-transparent to-blue-500/[0.05] p-8 text-center sm:p-12"
-        >
-          <p className="text-sm font-semibold text-violet-400">
-            Want to explore it?
-          </p>
-
-          <h2 className="mt-3 text-2xl font-black sm:text-3xl">
-            Try the live application
-          </h2>
-
-          <p className="mx-auto mt-4 max-w-xl text-sm leading-7 text-[var(--muted)]">
-            Explore the project yourself and see
-            how the implemented features work in a
-            real application.
-          </p>
-
-          <a
-            href={project.liveUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-7 inline-flex items-center gap-2 rounded-xl bg-[var(--foreground)] px-6 py-3 text-sm font-semibold text-[var(--background)]"
+        {project.liveUrl && (
+          <motion.div
+            initial={{
+              opacity: 0,
+              y: 25,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+            }}
+            viewport={{
+              once: true,
+            }}
+            className="mt-24 rounded-3xl border border-violet-500/20 bg-gradient-to-br from-violet-500/[0.08] via-transparent to-blue-500/[0.05] p-8 text-center sm:p-12"
           >
-            Open Live Demo
+            <p className="text-sm font-semibold text-violet-400">
+              Want to explore it?
+            </p>
 
-            <ArrowUpRight size={16} />
-          </a>
-        </motion.div>
+            <h2 className="mt-3 text-2xl font-black sm:text-3xl">
+              Try the live application
+            </h2>
+
+            <p className="mx-auto mt-4 max-w-xl text-sm leading-7 text-[var(--muted)]">
+              Explore the project yourself and see
+              how the implemented features work in a
+              real application.
+            </p>
+
+            <a
+              href={project.liveUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-7 inline-flex items-center gap-2 rounded-xl bg-[var(--foreground)] px-6 py-3 text-sm font-semibold text-[var(--background)]"
+            >
+              Open Live Demo
+
+              <ArrowUpRight size={16} />
+            </a>
+          </motion.div>
+        )}
       </Container>
     </main>
   );

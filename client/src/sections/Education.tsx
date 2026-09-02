@@ -23,10 +23,11 @@ const Education = () => {
           </h2>
 
           <p className="mt-5 text-base leading-8 text-[var(--muted)]">
-            Developing practical software engineering
-            skills alongside a strong foundation in
-            information technology and computer
-            science.
+            A physics background that sharpened
+            analytical thinking and structured
+            problem-solving, paired with software
+            engineering skills built over 3+ years of
+            professional work.
           </p>
         </div>
 
@@ -64,16 +65,17 @@ const Education = () => {
                   </p>
 
                   <h3 className="mt-1 text-2xl font-black">
-                    Information Technology
+                    Physics (Hons.)
                   </h3>
 
                   <p className="mt-2 text-sm font-medium text-[var(--muted)]">
-                    Ghazi University
+                    Government College University
+                    (GCU), Lahore
                   </p>
                 </div>
 
                 <span className="w-fit rounded-full border border-[var(--border)] px-3 py-1.5 text-xs font-medium text-[var(--muted)]">
-                  2023 — 2027
+                  2016 — 2020
                 </span>
               </div>
 
@@ -85,7 +87,7 @@ const Education = () => {
                   />
 
                   <span className="text-sm text-[var(--muted)]">
-                    Ghazi University
+                    Lahore, Pakistan
                   </span>
                 </div>
 
@@ -96,25 +98,41 @@ const Education = () => {
                   />
 
                   <span className="text-sm text-[var(--muted)]">
-                    Information Technology
+                    BSc. (Hons.) Physics
                   </span>
                 </div>
               </div>
 
-              {/* Relevant Coursework */}
+              {/* Thesis */}
               <div className="mt-8">
                 <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[var(--muted)]">
-                  Relevant Coursework
+                  Thesis
+                </p>
+
+                <p className="mt-4 text-base font-semibold leading-7">
+                  Different Attempts To Make Quantum
+                  Computers and Computation a Reality
+                </p>
+
+                <p className="mt-3 text-sm leading-7 text-[var(--muted)]">
+                  An analysis of how computers process
+                  and represent information — from
+                  classical architecture (binary, logic
+                  gates, transistors, CPU, memory and
+                  data encoding) through to emerging
+                  quantum models built on qubits,
+                  superposition, entanglement and
+                  quantum logic gates.
                 </p>
 
                 <div className="mt-4 flex flex-wrap gap-2">
                   {[
-                    "Object-Oriented Programming",
-                    "Data Structures",
-                    "Algorithms",
-                    "Design & Analysis of Algorithms",
-                    "Database Systems",
-                    "Web Programming",
+                    "Quantum Computing",
+                    "Qubits & Superposition",
+                    "Entanglement",
+                    "Logic Gates",
+                    "Computer Architecture",
+                    "Data Encoding",
                   ].map((item) => (
                     <span
                       key={item}

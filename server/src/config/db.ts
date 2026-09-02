@@ -1,10 +1,12 @@
 import mongoose from "mongoose";
 
+import { resolveMongoUri } from "./devDb.js";
+
 const connectDB = async (): Promise<void> => {
   try {
-    const connection = await mongoose.connect(
-      process.env.MONGO_URI as string
-    );
+    const uri = await resolveMongoUri();
+
+    const connection = await mongoose.connect(uri);
 
     console.log(
       `MongoDB Connected: ${connection.connection.host}`

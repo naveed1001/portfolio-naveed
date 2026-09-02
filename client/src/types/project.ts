@@ -13,9 +13,9 @@ export interface Project {
 
   category: string;
 
-  githubUrl: string;
+  githubUrl?: string;
 
-  liveUrl: string;
+  liveUrl?: string;
 
   featured: boolean;
 

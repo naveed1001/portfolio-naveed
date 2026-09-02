@@ -2,6 +2,8 @@ import {
   ArrowUpRight,
   BriefcaseBusiness,
   Mail,
+  MapPin,
+  Phone,
 } from "lucide-react";
 
 import {
@@ -19,7 +21,7 @@ const ContactSection = () => {
   return (
     <section
       id="contact"
-      className="relative overflow-hidden py-24 sm:py-32"
+      className="relative overflow-hidden py-12 sm:py-16"
     >
       {/* Background decoration */}
       <div className="pointer-events-none absolute right-[-180px] top-1/4 h-96 w-96 rounded-full bg-violet-500/10 blur-[140px]" />
@@ -63,10 +65,11 @@ const ContactSection = () => {
           </h2>
 
           <p className="mt-5 max-w-2xl text-base leading-8 text-[var(--muted)] sm:text-lg">
-            I'm open to opportunities, freelance
-            projects, and collaborations where I can
-            contribute my skills as a MERN Stack
-            Developer.
+            I'm open to senior engineering and team
+            lead roles, consulting engagements, and
+            long-term collaborations where I can
+            architect and ship production MERN
+            systems end to end.
           </p>
         </motion.div>
 
@@ -109,19 +112,31 @@ const ContactSection = () => {
                   opportunity?
                 </h3>
 
+                <div className="mt-3 flex items-center gap-2 text-xs text-[var(--muted)]">
+                  <MapPin
+                    size={14}
+                    className="text-violet-400"
+                  />
+
+                  Lahore, Pakistan
+                </div>
+
                 <p className="mt-5 max-w-xl text-sm leading-7 text-[var(--muted)] sm:text-base">
-                  Whether you're looking for a
-                  developer to build a web
-                  application, improve an existing
-                  product, or join your development
-                  team, I'd be happy to connect.
+                  With 3+ years building and leading
+                  MERN teams, I help companies design
+                  scalable backends, modernize
+                  existing products, and take
+                  ambitious ideas from concept to
+                  production. Tell me what you're
+                  building and I'll tell you how I'd
+                  approach it.
                 </p>
 
                 {/* Email CTA */}
                 <a
-                  href="https://mail.google.com/mail/?view=cm&fs=1&to=rhashir87@gmail.com&su=Portfolio%20Inquiry"
+                  href="https://mail.google.com/mail/?view=cm&fs=1&to=naveedmotha.dev@gmail.com&su=Portfolio%20Inquiry"
                   target="_blank"
-  rel="noopener noreferrer"
+                  rel="noopener noreferrer"
                   className="group mt-8 inline-flex items-center gap-3 rounded-xl bg-[var(--foreground)] px-5 py-3.5 text-sm font-semibold text-[var(--background)] transition hover:opacity-90"
                 >
                   <Mail size={17} />
@@ -145,7 +160,7 @@ const ContactSection = () => {
               <div className="mt-6 space-y-3">
                 {/* GitHub */}
                 <a
-                  href="https://github.com/UmarHashir"
+                  href="https://github.com/naveed1001"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group flex items-center justify-between rounded-2xl border border-[var(--border)] p-4 transition hover:border-violet-500/30 hover:bg-white/[0.03]"
@@ -174,7 +189,7 @@ const ContactSection = () => {
 
                 {/* LinkedIn */}
                 <a
-                  href="https://www.linkedin.com/in/umar-hashir-171218280/"
+                  href="https://linkedin.com/in/naveedahmed10001"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group flex items-center justify-between rounded-2xl border border-[var(--border)] p-4 transition hover:border-violet-500/30 hover:bg-white/[0.03]"
@@ -201,25 +216,23 @@ const ContactSection = () => {
                   />
                 </a>
 
-                {/* Upwork */}
+                {/* Phone */}
                 <a
-                  href="https://www.upwork.com/freelancers/~01d487c5d5c5f92840"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="tel:+923454510124"
                   className="group flex items-center justify-between rounded-2xl border border-[var(--border)] p-4 transition hover:border-violet-500/30 hover:bg-white/[0.03]"
                 >
                   <div className="flex items-center gap-4">
                     <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/5 text-[var(--muted)] transition group-hover:text-[var(--foreground)]">
-                      <BriefcaseBusiness size={19} />
+                      <Phone size={19} />
                     </div>
 
                     <div>
                       <p className="text-sm font-semibold">
-                        Upwork
+                        Phone
                       </p>
 
                       <p className="mt-0.5 text-xs text-[var(--muted)]">
-                        Hire me for freelance work
+                        +92-345-4510124
                       </p>
                     </div>
                   </div>
@@ -249,7 +262,7 @@ const ContactSection = () => {
               </div>
 
               <span className="text-xs text-[var(--muted)]">
-                MERN Stack Developer
+                Senior MERN Stack Developer
               </span>
             </div>
           </div>

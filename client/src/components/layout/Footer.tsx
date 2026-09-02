@@ -1,6 +1,7 @@
 import {
   ArrowUpRight,
   Heart,
+  Mail,
 } from "lucide-react";
 
 import { FaGithub,FaLinkedin } from "react-icons/fa";
@@ -14,25 +15,25 @@ const Footer = () => {
           <div>
             <div className="flex items-center gap-3">
               <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-violet-500 to-fuchsia-500 text-sm font-black text-white">
-                UH
+                NA
               </div>
 
               <div>
                 <p className="text-sm font-bold">
-                  Umar Hashir
+                  Naveed Ahmed
                 </p>
 
                 <p className="text-[10px] uppercase tracking-[0.2em] text-[var(--muted)]">
-                  MERN Stack Developer
+                  Senior MERN Stack Developer
                 </p>
               </div>
             </div>
 
             <p className="mt-5 max-w-md text-sm leading-7 text-[var(--muted)]">
-              Building modern, scalable and
-              user-focused full-stack web
-              applications with the MERN stack
-              and TypeScript.
+              Building full-stack MERN and
+              TypeScript applications, scalable
+              backends and enterprise platforms
+              from concept to production.
             </p>
           </div>
 
@@ -48,6 +49,13 @@ const Footer = () => {
                 className="block text-sm text-[var(--muted)] transition hover:text-[var(--foreground)]"
               >
                 About
+              </a>
+
+              <a
+                href="/#experience"
+                className="block text-sm text-[var(--muted)] transition hover:text-[var(--foreground)]"
+              >
+                Experience
               </a>
 
               <a
@@ -81,7 +89,7 @@ const Footer = () => {
 
             <div className="mt-5 space-y-3">
               <a
-                href="https://github.com/UmarHashir"
+                href="https://github.com/naveed1001"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 text-sm text-[var(--muted)] transition hover:text-[var(--foreground)]"
@@ -97,7 +105,7 @@ const Footer = () => {
               </a>
 
               <a
-                href="https://www.linkedin.com/in/umar-hashir-171218280/"
+                href="https://linkedin.com/in/naveedahmed10001"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 text-sm text-[var(--muted)] transition hover:text-[var(--foreground)]"
@@ -113,12 +121,14 @@ const Footer = () => {
               </a>
 
               <a
-                href="https://www.upwork.com/freelancers/~01d487c5d5c5f92840"
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=naveedmotha.dev@gmail.com&su=Portfolio%20Inquiry"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 text-sm text-[var(--muted)] transition hover:text-[var(--foreground)]"
               >
-                Upwork
+                <Mail size={17} />
+
+                Email
 
                 <ArrowUpRight
                   size={14}
@@ -132,8 +142,8 @@ const Footer = () => {
         {/* Bottom */}
         <div className="mt-12 flex flex-col gap-4 border-t border-[var(--border)] pt-6 text-xs text-[var(--muted)] sm:flex-row sm:items-center sm:justify-between">
           <p>
-            © {new Date().getFullYear()} Umar
-            Hashir. All rights reserved.
+            © {new Date().getFullYear()} Naveed
+            Ahmed. All rights reserved.
           </p>
 
           <p className="flex items-center gap-1.5">

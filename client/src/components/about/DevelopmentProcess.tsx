@@ -47,7 +47,7 @@ const steps = [
 
 const DevelopmentProcess = () => {
   return (
-    <section className="py-24 sm:py-32">
+    <section className="py-12 sm:py-16">
       <Container>
         <div className="grid gap-12 lg:grid-cols-[0.75fr_1.25fr]">
           {/* Heading */}

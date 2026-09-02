@@ -28,92 +28,92 @@ const skillGroups: SkillGroup[] = [
   {
     title: "Frontend",
     description:
-      "Building responsive and interactive user interfaces.",
+      "Building responsive, SEO-friendly interfaces with React and Next.js.",
     icon: Layers3,
     skills: [
-      "React",
+      "React.js",
+      "Next.js",
       "TypeScript",
       "JavaScript",
+      "Redux Toolkit",
+      "Tailwind CSS",
+      "Bootstrap",
       "HTML5",
       "CSS3",
-      "Tailwind CSS",
-      "Framer Motion",
-      "Axios",
     ],
   },
 
   {
     title: "Backend",
     description:
-      "Developing REST APIs and server-side application logic.",
+      "Designing REST APIs and server-side services in Node, Express and NestJS.",
     icon: Server,
     skills: [
       "Node.js",
       "Express.js",
+      "NestJS",
       "REST APIs",
       "JWT Authentication",
-      "Middleware",
-      "API Integration",
+      "BullMQ",
     ],
   },
 
   {
-    title: "Database",
+    title: "Databases",
     description:
-      "Designing and working with application data.",
+      "Modeling, indexing and querying data across MongoDB, MySQL and PostgreSQL.",
     icon: Database,
     skills: [
       "MongoDB",
-      "PostgreSql",
-      "MySql",
+      "MySQL",
+      "PostgreSQL",
+      "Redis",
       "Mongoose",
       "Schema Design",
-      "CRUD Operations",
-      "Data Modeling",
+      "Indexing",
     ],
   },
 
   {
-    title: "Programming",
+    title: "Caching & Messaging",
     description:
-      "Strong foundations for solving programming problems.",
-    icon: Braces,
-    skills: [
-      "TypeScript",
-      "JavaScript",
-      "C++",
-      "OOP",
-      "DSA",
-    ],
-  },
-
-  {
-    title: "Tools & Deployment",
-    description:
-      "Development workflow and application deployment.",
-    icon: GitBranch,
-    skills: [
-      "GitHub",
-      "Git",
-      "Vercel",
-      "Render",
-      "Cloudinary",
-      "Postman",
-    ],
-  },
-
-  {
-    title: "Development",
-    description:
-      "Engineering practices used across projects.",
+      "Keeping responses fast and moving heavy work into background queues.",
     icon: Terminal,
     skills: [
-      "Reusable Components",
-      "Responsive Design",
-      "Authentication",
-      "Error Handling",
-      "API Architecture",
-      "Clean Code",
+      "Redis",
+      "RabbitMQ",
+      "BullMQ",
+      "Caching Strategies",
+    ],
+  },
+
+  {
+    title: "DevOps & Cloud",
+    description:
+      "Shipping and running applications on AWS with Docker and CI/CD.",
+    icon: GitBranch,
+    skills: [
+      "AWS",
+      "Docker",
+      "CI/CD Pipelines",
+      "Git",
+      "GitHub",
+      "Cloudinary",
+    ],
+  },
+
+  {
+    title: "Tools & Practice",
+    description:
+      "The day-to-day workflow behind planning, testing and reviewing code.",
+    icon: Braces,
+    skills: [
+      "Postman",
+      "JIRA",
+      "ClickUp",
+      "Cursor",
+      "Claude",
+      "Code Review",
     ],
   },
 ];
@@ -122,7 +122,7 @@ const SkillsSection = () => {
   return (
     <section
       id="skills"
-      className="relative py-24 sm:py-32"
+      className="relative py-12 sm:py-16"
     >
       <Container>
         {/* Heading */}
@@ -155,9 +155,9 @@ const SkillsSection = () => {
           </h2>
 
           <p className="mt-5 max-w-2xl text-sm leading-7 text-[var(--muted)] sm:text-base">
-            A practical toolkit built through hands-on
-            projects, academic foundations and continuous
-            development.
+            The stack I use day to day to take products
+            from interface and API design through to
+            databases, caching and cloud deployment.
           </p>
         </motion.div>
 

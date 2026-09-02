@@ -14,27 +14,27 @@ import Section from "../components/ui/Section";
 const highlights = [
   {
     icon: Code2,
-    title: "Full-Stack Development",
+    title: "Team Leadership",
     description:
-      "Building complete web applications across frontend, backend, APIs, authentication and database layers.",
+      "Leading end-to-end delivery at TheCloudOps as the primary technical contact for clients, translating their requirements into shipped solutions.",
   },
   {
     icon: Layers3,
     title: "MERN + TypeScript",
     description:
-      "Developing modern applications using React, TypeScript, Node.js, Express.js and MongoDB.",
+      "Building production applications with React, Next.js, TypeScript, Node.js, NestJS and Express.js.",
   },
   {
     icon: Database,
-    title: "Backend & APIs",
+    title: "Large-Scale Data",
     description:
-      "Designing REST APIs, database models, authentication flows and server-side business logic.",
+      "Consolidating a 7M+ document catalog into 3 core MongoDB collections and cutting API query times from 300ms to 50ms.",
   },
   {
     icon: Terminal,
-    title: "Computer Science Foundation",
+    title: "Payments & Cloud",
     description:
-      "Strong academic foundation in OOP, Data Structures, Algorithms and Design & Analysis of Algorithms.",
+      "Stripe checkout, Connect payouts and invoicing, shipped on AWS with Docker, Redis and CI/CD pipelines.",
   },
 ];
 
@@ -94,32 +94,32 @@ const About = () => {
             }}
           >
             <p className="text-base leading-8 text-[var(--muted)] sm:text-lg">
-              I'm Umar Hashir, a BS Information
-              Technology student and MERN Stack
-              Developer focused on building modern,
-              responsive and practical web
-              applications.
+              I'm Naveed Ahmed, a Senior MERN Stack
+              Developer and Team Lead at TheCloudOps
+              with 3+ years of professional experience
+              building scalable web applications and
+              enterprise software solutions.
             </p>
 
             <p className="mt-5 text-base leading-8 text-[var(--muted)] sm:text-lg">
-              My primary development stack is
-              MongoDB, Express.js, React and Node.js,
-              with TypeScript for writing more
-              maintainable and scalable applications.
-              I enjoy working across the complete
-              application lifecycle — from designing
-              interfaces and APIs to database modeling,
-              authentication and deployment.
+              My primary stack is React, Node.js,
+              Express.js, NestJS, MongoDB and MySQL,
+              with TypeScript throughout. I work across
+              the complete application lifecycle — from
+              architecting backend systems and designing
+              REST APIs to database modeling and
+              deployment on AWS with Docker and Redis.
             </p>
 
             <p className="mt-5 text-base leading-8 text-[var(--muted)] sm:text-lg">
-              Alongside web development, my academic
-              background includes Object-Oriented
-              Programming, Data Structures,
-              Algorithms and Design & Analysis of
-              Algorithms. This foundation helps me
-              approach development with an emphasis on
-              structured thinking and problem solving.
+              Right now I lead development on Private
+              Jet One Ways, an aviation booking platform
+              with end-to-end Stripe payments, and
+              LyricsWeb, an ad-supported music platform
+              serving an 11M+ document catalog. I'm also
+              the primary technical contact for clients,
+              turning business needs into technical
+              solutions.
             </p>
 
             <a
