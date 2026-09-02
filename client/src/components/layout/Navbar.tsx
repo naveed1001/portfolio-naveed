@@ -249,7 +249,7 @@ const Navbar = () => {
         {item.label}
 
         {active && (
-          <span className="absolute bottom-0 left-1/2 h-1 w-1 -translate-x-1/2 rounded-full bg-violet-400" />
+          <span className="absolute bottom-1 left-3 right-3 h-0.5 rounded-full bg-violet-400" />
         )}
       </button>
     );
