@@ -79,7 +79,7 @@ const AboutSection = () => {
               />
 
               <h3 className="text-lg font-bold">
-                Senior MERN Stack Developer
+                Senior MERN Stack Developer & Team Lead
               </h3>
             </div>
 

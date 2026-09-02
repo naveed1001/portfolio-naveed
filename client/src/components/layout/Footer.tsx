@@ -24,7 +24,7 @@ const Footer = () => {
                 </p>
 
                 <p className="text-[10px] uppercase tracking-[0.2em] text-[var(--muted)]">
-                  Senior MERN Stack Developer
+                  Senior MERN Developer · Team Lead
                 </p>
               </div>
             </div>

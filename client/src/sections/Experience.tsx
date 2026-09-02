@@ -26,9 +26,10 @@ const roles: Role[] = [
     location: "Lahore, Punjab",
     current: true,
     points: [
+      "Leading a development team as the primary technical point of contact for clients — gathering requirements, translating business needs into technical solutions and owning delivery end to end.",
       "Leading the end-to-end development of a confidential full-stack aviation management platform built with the MERN stack, supporting a real-time flight booking and management system.",
       "Driving full-stack development of a confidential ad-supported music lyrics platform with an 11M+ document catalog, owning AI-powered ad targeting, header-bidding integration, SEO optimization and large-scale MongoDB migrations.",
-      "Acting as the primary technical point of contact for clients — gathering requirements, translating business needs into technical solutions and ensuring timely delivery.",
+      "Setting the technical direction across both platforms — architecture, payment and concurrency guarantees, and the AI capabilities layered on top — and taking each from concept to production.",
     ],
   },
   {

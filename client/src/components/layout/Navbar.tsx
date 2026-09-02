@@ -308,7 +308,7 @@ const Navbar = () => {
   </p>
 
   <p className="text-[8px] uppercase tracking-[0.15em] text-[var(--muted)] sm:text-[10px] sm:tracking-[0.2em]">
-    MERN Stack Developer
+    MERN Developer · Team Lead
   </p>
 </div>
           </Link>
