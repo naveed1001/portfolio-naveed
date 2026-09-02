@@ -94,12 +94,12 @@ export const projects: Project[] = [
   {
     _id: "confidential-ai-platform",
 
-    title: "Confidential Private Aviation AI Platform",
+    title: "Confidential AI Platform",
 
     slug: "confidential-ai-platform",
 
     description:
-      "Client details withheld under NDA. A production-oriented AI platform for a private aviation business, grown capability by capability from rule-based intent detection into a full retrieval-augmented system with streaming responses, controlled tool calling and bounded agents. Every layer is engineered for control rather than raw generation: grounded answers with citations, authorization gates before any tool runs, token budgets and step-level observability.",
+      "Client details withheld under NDA. A production-oriented AI platform for business, grown capability by capability from rule-based intent detection into a full retrieval-augmented system with streaming responses, controlled tool calling and bounded agents. Every layer is engineered for control rather than raw generation: grounded answers with citations, authorization gates before any tool runs, token budgets and step-level observability.",
 
     technologies: [
       "TypeScript",
@@ -141,7 +141,7 @@ export const projects: Project[] = [
     order: 2,
 
     overview:
-      "Client details are withheld under NDA. I developed and contributed to a production-oriented AI platform for a private aviation business, adding one AI capability at a time rather than shipping a single chatbot: keyword-based intent detection with Gemini responses first, then structured output schemas, an end-to-end Retrieval-Augmented Generation pipeline, streaming over Server-Sent Events, a controlled tool-calling registry, a bounded agent loop, and finally guardrails, cost monitoring and a non-generative recommendation system. The focus throughout was reliability, controlled AI behavior, security, observability and practical production use cases, treating the model as one component inside an engineered system rather than an API call that is trusted to do the right thing.",
+      "Client details are withheld under NDA. I developed and contributed to a production-oriented AI platform for business, adding one AI capability at a time rather than shipping a single chatbot: keyword-based intent detection with Gemini responses first, then structured output schemas, an end-to-end Retrieval-Augmented Generation pipeline, streaming over Server-Sent Events, a controlled tool-calling registry, a bounded agent loop, and finally guardrails, cost monitoring and a non-generative recommendation system. The focus throughout was reliability, controlled AI behavior, security, observability and practical production use cases, treating the model as one component inside an engineered system rather than an API call that is trusted to do the right thing.",
 
     capabilities: [
       {
