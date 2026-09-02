@@ -115,7 +115,7 @@ const About = () => {
               Right now I lead development on Private
               Jet One Ways, an aviation booking platform
               with end-to-end Stripe payments, and
-              LyricsWeb, an ad-supported music platform
+              a confidential ad-supported music platform
               serving an 11M+ document catalog. I'm also
               the primary technical contact for clients,
               turning business needs into technical

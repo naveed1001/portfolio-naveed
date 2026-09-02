@@ -26,8 +26,8 @@ const roles: Role[] = [
     location: "Lahore, Punjab",
     current: true,
     points: [
-      "Leading the end-to-end development of Private Jet One Ways, a full-stack aviation management platform built with the MERN stack, supporting a real-time flight booking and management system.",
-      "Driving full-stack development of LyricsWeb, an ad-supported music lyrics platform with an 11M+ document catalog, owning AI-powered ad targeting, header-bidding integration, SEO optimization and large-scale MongoDB migrations.",
+      "Leading the end-to-end development of a confidential full-stack aviation management platform built with the MERN stack, supporting a real-time flight booking and management system.",
+      "Driving full-stack development of a confidential ad-supported music lyrics platform with an 11M+ document catalog, owning AI-powered ad targeting, header-bidding integration, SEO optimization and large-scale MongoDB migrations.",
       "Acting as the primary technical point of contact for clients — gathering requirements, translating business needs into technical solutions and ensuring timely delivery.",
     ],
   },

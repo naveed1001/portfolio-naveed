@@ -297,7 +297,7 @@ const ProjectDetails = () => {
             <img
               src={project.image}
               alt={`${project.title} cover`}
-              className="aspect-[16/8] w-full object-contain"
+              className="block h-auto w-full"
             />
           </motion.div>
         )}
@@ -505,6 +505,30 @@ const ProjectDetails = () => {
                           testimonial.quote
                         }
                       </blockquote>
+
+                      {testimonial.image && (
+                        <figure className="mt-6 overflow-hidden rounded-2xl border border-[var(--border)] bg-white/[0.02]">
+                          <img
+                            src={
+                              testimonial.image
+                            }
+                            alt={
+                              testimonial.imageCaption ??
+                              "Screenshot of the work this feedback refers to"
+                            }
+                            loading="lazy"
+                            className="block h-auto w-full"
+                          />
+
+                          {testimonial.imageCaption && (
+                            <figcaption className="border-t border-[var(--border)] px-5 py-4 text-xs leading-6 text-[var(--muted)]">
+                              {
+                                testimonial.imageCaption
+                              }
+                            </figcaption>
+                          )}
+                        </figure>
+                      )}
 
                       <figcaption className="mt-6 border-t border-[var(--border)] pt-5">
                         <p className="text-sm font-semibold">

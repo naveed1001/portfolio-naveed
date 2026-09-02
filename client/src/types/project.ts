@@ -2,6 +2,10 @@ export interface Testimonial {
   quote: string;
   author: string;
   role: string;
+
+  /** Optional screenshot of the work the feedback is about. */
+  image?: string;
+  imageCaption?: string;
 }
 
 export interface Project {

@@ -72,6 +72,26 @@ const Testimonials = () => {
                   {item.quote}
                 </blockquote>
 
+                {item.image && (
+                  <figure className="mt-7 overflow-hidden rounded-2xl border border-[var(--border)] bg-white/[0.02]">
+                    <img
+                      src={item.image}
+                      alt={
+                        item.imageCaption ??
+                        "Screenshot of the work this feedback refers to"
+                      }
+                      loading="lazy"
+                      className="block h-auto w-full"
+                    />
+
+                    {item.imageCaption && (
+                      <figcaption className="border-t border-[var(--border)] px-5 py-4 text-xs leading-6 text-[var(--muted)]">
+                        {item.imageCaption}
+                      </figcaption>
+                    )}
+                  </figure>
+                )}
+
                 <figcaption className="mt-7 border-t border-[var(--border)] pt-6">
                   <p className="text-sm font-semibold text-[var(--foreground)]">
                     {item.author}

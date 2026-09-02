@@ -63,7 +63,7 @@ const ProjectGallery = ({
 
   return (
     <>
-      <div className="grid gap-4 sm:grid-cols-2">
+      <div className="grid items-start gap-4 sm:grid-cols-2">
         {images.map(
           (image, index) => (
             <motion.button
@@ -99,11 +99,7 @@ const ProjectGallery = ({
                 alt={`${title} screenshot ${
                   index + 1
                 }`}
-                className={`h-full w-full object-contain transition duration-700 group-hover:scale-[1.03] ${
-                  index === 0
-                    ? "aspect-[16/8]"
-                    : "aspect-[16/10]"
-                }`}
+                className="block h-auto w-full transition duration-700 group-hover:scale-[1.03]"
               />
 
               <div className="absolute inset-0 flex items-center justify-center bg-black/0 transition duration-300 group-hover:bg-black/30">

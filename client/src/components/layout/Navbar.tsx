@@ -12,6 +12,7 @@ import {
 import {
   Link,
   useLocation,
+  useNavigate,
 } from "react-router-dom";
 
 import {
@@ -55,6 +56,8 @@ const navItems = [
 
 const Navbar = () => {
   const location = useLocation();
+
+  const navigate = useNavigate();
 
   const [
     mobileOpen,
@@ -136,14 +139,20 @@ const Navbar = () => {
   ) => {
     setMobileOpen(false);
 
+    const id = href.replace("#", "");
+
     if (location.pathname !== "/") {
+      navigate("/", {
+        state: {
+          scrollTo: id,
+        },
+      });
+
       return;
     }
 
     const element =
-      document.getElementById(
-        href.replace("#", "")
-      );
+      document.getElementById(id);
 
     if (!element) {
       return;
@@ -154,6 +163,89 @@ const Navbar = () => {
       block: "start",
     });
   };
+
+  // Finish a cross-page jump. Two things fight this: ScrollToTop resets the
+  // scroll on every route change, and project screenshots further up the page
+  // load after mount and push later sections down. So align on the next frame
+  // and then re-check until the position settles.
+  useEffect(() => {
+    const target = (
+      location.state as {
+        scrollTo?: string;
+      } | null
+    )?.scrollTo;
+
+    if (
+      location.pathname !== "/" ||
+      !target
+    ) {
+      return;
+    }
+
+    let cancelled = false;
+
+    const timers: number[] = [];
+
+    const align = () => {
+      if (cancelled) {
+        return;
+      }
+
+      const element =
+        document.getElementById(
+          target
+        );
+
+      if (!element) {
+        return;
+      }
+
+      // Matches scroll-padding-top in index.css.
+      const offset =
+        element.getBoundingClientRect()
+          .top - 100;
+
+      if (Math.abs(offset) < 8) {
+        return;
+      }
+
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    };
+
+    const frame =
+      requestAnimationFrame(align);
+
+    [250, 600, 1100].forEach(
+      (delay) => {
+        timers.push(
+          window.setTimeout(
+            align,
+            delay
+          )
+        );
+      }
+    );
+
+    navigate("/", {
+      replace: true,
+      state: null,
+    });
+
+    return () => {
+      cancelled = true;
+
+      cancelAnimationFrame(frame);
+
+      timers.forEach(clearTimeout);
+    };
+  }, [
+    location.pathname,
+    location.state,
+    navigate,
+  ]);
 
   return (
     <>

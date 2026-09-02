@@ -7,12 +7,12 @@ dotenv.config();
 
 const projects = [
   {
-    title: "Private Jet One Ways",
+    title: "Confidential Project - Aviation Charter Platform",
 
-    slug: "private-jet-one-ways",
+    slug: "confidential-aviation-platform",
 
     description:
-      "A full-stack private jet charter marketplace that connects operators, brokers and flyers on a single aviation management platform. It handles the entire booking lifecycle, from searching one-way legs to signing the charter contract and settling payment. Stripe powers the money movement end to end, including operator payouts and tokenized broker invoicing.",
+      "Client details withheld under NDA. A full-stack private jet charter marketplace that connects operators, brokers and flyers on a single aviation management platform. It handles the entire booking lifecycle, from searching one-way legs to signing the charter contract and settling payment. Stripe powers the money movement end to end, including operator payouts and tokenized broker invoicing.",
 
     technologies: [
       "React",
@@ -28,7 +28,7 @@ const projects = [
 
     githubUrl: "",
 
-    liveUrl: "https://pjowco.com/",
+    liveUrl: "",
 
     featured: true,
 
@@ -46,21 +46,21 @@ const projects = [
       "Owner-approval payment holds before funds are captured",
     ],
 
-    image: "/projects/private-jet-one-ways/cover.png",
+    image: "/projects/confidential-aviation-platform/cover.png",
 
     gallery: [
-      "/projects/private-jet-one-ways/booking-search.png",
-      "/projects/private-jet-one-ways/flight-results.png",
-      "/projects/private-jet-one-ways/route-map.png",
-      "/projects/private-jet-one-ways/charter-estimate.png",
-      "/projects/private-jet-one-ways/admin-dashboard.png",
-      "/projects/private-jet-one-ways/admin-flights.png",
+      "/projects/confidential-aviation-platform/booking-search.png",
+      "/projects/confidential-aviation-platform/flight-results.png",
+      "/projects/confidential-aviation-platform/route-map.png",
+      "/projects/confidential-aviation-platform/charter-estimate.png",
+      "/projects/confidential-aviation-platform/admin-dashboard.png",
+      "/projects/confidential-aviation-platform/admin-flights.png",
     ],
 
     order: 1,
 
     overview:
-      "Private Jet One Ways is the platform I lead end to end at TheCloudOps: a full-stack aviation management product built with React, Node.js and Express on a MySQL data layer. Operators publish one-way availability, brokers invoice their own clients, and flyers search, hold and book an aircraft in one flow. The hard parts are not the screens but the guarantees behind them, keeping a single aircraft from being sold twice while a checkout is in flight, and making sure money is only captured once the owner has approved the trip and the contract has been signed.",
+      "Client details are withheld under NDA. This is the aviation platform I lead end to end at TheCloudOps: a full-stack aviation management product built with React, Node.js and Express on a MySQL data layer. Operators publish one-way availability, brokers invoice their own clients, and flyers search, hold and book an aircraft in one flow. The hard parts are not the screens but the guarantees behind them, keeping a single aircraft from being sold twice while a checkout is in flight, and making sure money is only captured once the owner has approved the trip and the contract has been signed.",
 
     challenges: [
       "Preventing double-booking when several flyers start checkout on the same aircraft at the same time",
@@ -86,18 +86,22 @@ const projects = [
         quote:
           "Incredible work! I was told that when this project was previously assigned to another company, this feature would take around a month to develop and implement. You managed to get it done much more efficiently.",
         author: "Client",
-        role: "Private Jet One Ways",
+        role: "Confidential aviation platform",
+        image:
+          "/projects/confidential-aviation-platform/route-map.png",
+        imageCaption:
+          "The flight route map this feedback refers to: the aircraft animates along the route from the departure airport to the arrival airport.",
       },
     ],
   },
 
   {
-    title: "LyricsWeb",
+    title: "Confidential Project - Music Lyrics Platform",
 
-    slug: "lyricsweb",
+    slug: "confidential-music-platform",
 
     description:
-      "An ad-supported music lyrics platform serving an 11M+ document catalog of songs, artists and albums. The public site is built for organic search, with SEO-optimized ISR and RSC pages, JSON-LD structured data and Core Web Vitals tuning, while revenue comes from Google Ad Manager targeting and PubGuru header bidding. Behind it sits an AI content pipeline and a full admin CMS.",
+      "Client details withheld under NDA. An ad-supported music lyrics platform serving an 11M+ document catalog of songs, artists and albums. The public site is built for organic search, with SEO-optimized ISR and RSC pages, JSON-LD structured data and Core Web Vitals tuning, while revenue comes from Google Ad Manager targeting and PubGuru header bidding. Behind it sits an AI content pipeline and a full admin CMS.",
 
     technologies: [
       "Next.js",
@@ -111,7 +115,7 @@ const projects = [
 
     githubUrl: "",
 
-    liveUrl: "https://lyricsweb.com/",
+    liveUrl: "",
 
     featured: true,
 
@@ -129,14 +133,14 @@ const projects = [
       "Batch-job operations console and a UGC moderation suite",
     ],
 
-    image: "/projects/lyricsweb/cover.png",
+    image: "/projects/confidential-music-platform/cover.png",
 
     gallery: [],
 
     order: 2,
 
     overview:
-      "LyricsWeb is an ad-supported music lyrics platform where I drive full-stack development at TheCloudOps. The catalog is the product, more than 11 million song, artist and album documents that have to be crawlable, fast and monetized at the same time. My work spans the rendering strategy for those pages, the AI pipelines that enrich them with song meanings and news, the ad stack that pays for them, and the admin CMS the editorial team uses to run the whole thing.",
+      "Client details are withheld under NDA. This is an ad-supported music lyrics platform where I drive full-stack development at TheCloudOps. The catalog is the product, more than 11 million song, artist and album documents that have to be crawlable, fast and monetized at the same time. My work spans the rendering strategy for those pages, the AI pipelines that enrich them with song meanings and news, the ad stack that pays for them, and the admin CMS the editorial team uses to run the whole thing.",
 
     challenges: [
       "Query times of around 300ms against a 7M+ document catalog spread across scattered staging collections",

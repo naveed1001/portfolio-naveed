@@ -24,6 +24,8 @@ export interface IProject extends Document {
         quote: string;
         author: string;
         role: string;
+        image?: string;
+        imageCaption?: string;
     }[];
     createdAt: Date;
     updatedAt: Date;
@@ -133,6 +135,8 @@ const projectSchema = new Schema<IProject>(
                     quote: String,
                     author: String,
                     role: String,
+                    image: String,
+                    imageCaption: String,
                 },
             ],
             default: [],
