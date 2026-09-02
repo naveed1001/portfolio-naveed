@@ -4,7 +4,7 @@ import {
   GitBranch,
   Layers3,
   Server,
-  Terminal,
+  Sparkles,
 } from "lucide-react";
 
 import type {
@@ -59,9 +59,9 @@ const skillGroups: SkillGroup[] = [
   },
 
   {
-    title: "Databases",
+    title: "Databases & Caching",
     description:
-      "Modeling, indexing and querying data across MongoDB, MySQL and PostgreSQL.",
+      "Modeling and indexing data, keeping reads fast and pushing heavy work into queues.",
     icon: Database,
     skills: [
       "MongoDB",
@@ -71,19 +71,26 @@ const skillGroups: SkillGroup[] = [
       "Mongoose",
       "Schema Design",
       "Indexing",
+      "RabbitMQ",
+      "BullMQ",
     ],
   },
 
   {
-    title: "Caching & Messaging",
+    title: "AI Engineering",
     description:
-      "Keeping responses fast and moving heavy work into background queues.",
-    icon: Terminal,
+      "Building AI as a controlled system: grounded, bounded, observable and cost aware.",
+    icon: Sparkles,
     skills: [
-      "Redis",
-      "RabbitMQ",
-      "BullMQ",
-      "Caching Strategies",
+      "LLM Integration",
+      "Structured Output",
+      "RAG",
+      "Embeddings",
+      "Streaming (SSE)",
+      "Tool Calling",
+      "AI Agents",
+      "Guardrails",
+      "Recommendations",
     ],
   },
 
@@ -155,9 +162,9 @@ const SkillsSection = () => {
           </h2>
 
           <p className="mt-5 max-w-2xl text-sm leading-7 text-[var(--muted)] sm:text-base">
-            The stack I use day to day to take products
-            from interface and API design through to
-            databases, caching and cloud deployment.
+            The stack I use day to day, from interface and
+            API design through to databases, AI systems
+            and cloud deployment.
           </p>
         </motion.div>
 

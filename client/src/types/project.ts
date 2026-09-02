@@ -8,6 +8,12 @@ export interface Testimonial {
   imageCaption?: string;
 }
 
+export interface ProjectCapability {
+  title: string;
+  summary: string;
+  points: string[];
+}
+
 export interface Project {
   _id: string;
 
@@ -42,6 +48,8 @@ export interface Project {
   solutions: string[];
 
   architecture?: string;
+
+  capabilities?: ProjectCapability[];
 
   testimonials?: Testimonial[];
 

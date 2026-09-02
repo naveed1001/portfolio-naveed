@@ -392,6 +392,111 @@ const ProjectDetails = () => {
           </section>
         )}
 
+        {/* What I Built */}
+        {project.capabilities &&
+          project.capabilities
+            .length > 0 && (
+            <section className="mt-24">
+              <SectionTitle>
+                What I Built
+              </SectionTitle>
+
+              <p className="mt-4 max-w-2xl text-sm leading-7 text-[var(--muted)]">
+                A staged breakdown of what I built,
+                each capability building on the stage
+                before it.
+              </p>
+
+              <div className="mt-8 space-y-5">
+                {project.capabilities.map(
+                  (
+                    capability,
+                    index
+                  ) => (
+                    <motion.article
+                      key={
+                        capability.title
+                      }
+                      initial={{
+                        opacity: 0,
+                        y: 25,
+                      }}
+                      whileInView={{
+                        opacity: 1,
+                        y: 0,
+                      }}
+                      viewport={{
+                        once: true,
+                      }}
+                      transition={{
+                        duration: 0.6,
+                        delay:
+                          index * 0.05,
+                      }}
+                      className="rounded-3xl border border-[var(--border)] bg-white/[0.02] p-6 sm:p-8"
+                    >
+                      <div className="grid gap-5 sm:grid-cols-[auto_1fr] sm:gap-7">
+                        <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-violet-500/20 bg-violet-500/10 text-sm font-black tracking-[0.08em] text-violet-400">
+                          {String(
+                            index + 1
+                          ).padStart(
+                            2,
+                            "0"
+                          )}
+                        </span>
+
+                        <div>
+                          <h3 className="text-lg font-bold tracking-tight sm:text-xl">
+                            {
+                              capability.title
+                            }
+                          </h3>
+
+                          <p className="mt-3 max-w-3xl text-sm leading-7 text-[var(--muted)]">
+                            {
+                              capability.summary
+                            }
+                          </p>
+
+                          {capability
+                            .points
+                            .length >
+                            0 && (
+                            <ul className="mt-5 grid gap-2.5 lg:grid-cols-2">
+                              {capability.points.map(
+                                (
+                                  point
+                                ) => (
+                                  <li
+                                    key={
+                                      point
+                                    }
+                                    className="flex items-start gap-3"
+                                  >
+                                    <CheckCircle2
+                                      size={16}
+                                      className="mt-0.5 shrink-0 text-violet-400"
+                                    />
+
+                                    <span className="text-sm leading-6 text-[var(--muted)]">
+                                      {
+                                        point
+                                      }
+                                    </span>
+                                  </li>
+                                )
+                              )}
+                            </ul>
+                          )}
+                        </div>
+                      </div>
+                    </motion.article>
+                  )
+                )}
+              </div>
+            </section>
+          )}
+
         {/* Challenges + Solutions */}
         <div className="mt-24 grid gap-8 lg:grid-cols-2">
           {project.challenges.length >

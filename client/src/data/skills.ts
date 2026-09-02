@@ -4,6 +4,7 @@ export interface Skill {
     | "Frontend"
     | "Backend"
     | "Database"
+    | "AI"
     | "DevOps"
     | "Tools"
     | "CS";
@@ -99,6 +100,58 @@ export const skills: Skill[] = [
   {
     name: "Redis",
     category: "Database",
+    level: "Working Knowledge",
+  },
+
+  // AI Engineering
+  {
+    name: "LLM Integration",
+    category: "AI",
+    level: "Primary",
+  },
+  {
+    name: "Gemini",
+    category: "AI",
+    level: "Working Knowledge",
+  },
+  {
+    name: "Structured Output",
+    category: "AI",
+    level: "Primary",
+  },
+  {
+    name: "RAG",
+    category: "AI",
+    level: "Primary",
+  },
+  {
+    name: "Embeddings",
+    category: "AI",
+    level: "Working Knowledge",
+  },
+  {
+    name: "Streaming (SSE)",
+    category: "AI",
+    level: "Working Knowledge",
+  },
+  {
+    name: "Tool Calling",
+    category: "AI",
+    level: "Primary",
+  },
+  {
+    name: "AI Agents",
+    category: "AI",
+    level: "Working Knowledge",
+  },
+  {
+    name: "Guardrails",
+    category: "AI",
+    level: "Working Knowledge",
+  },
+  {
+    name: "Recommendations",
+    category: "AI",
     level: "Working Knowledge",
   },
 
