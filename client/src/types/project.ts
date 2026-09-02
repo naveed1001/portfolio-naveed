@@ -35,9 +35,9 @@ export interface Project {
 
   order: number;
 
-  createdAt: string;
+  createdAt?: string;
 
-  updatedAt: string;
+  updatedAt?: string;
 }
 
 export interface ProjectsResponse {

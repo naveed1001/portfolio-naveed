@@ -1,36 +1,47 @@
-import api from "../lib/api";
+import { projects } from "../data/projects";
 
 import type {
   Project,
-  ProjectsResponse,
 } from "../types/project";
+
+const byOrderAscending = (
+  first: Project,
+  second: Project
+): number =>
+  first.order - second.order;
 
 export const getProjects =
   async (): Promise<Project[]> => {
-    const response =
-      await api.get("/projects");
-
-    return response.data.data;
+    return [...projects].sort(
+      byOrderAscending
+    );
   };
 
 export const getProjectBySlug =
   async (
     slug: string
   ): Promise<Project> => {
-    const response =
-      await api.get(
-        `/projects/${slug}`
+    const project =
+      projects.find(
+        (item) =>
+          item.slug === slug
       );
 
-    return response.data.data;
+    if (!project) {
+      throw new Error(
+        `Project not found for slug: ${slug}`
+      );
+    }
+
+    return project;
   };
+
 export const getFeaturedProjects =
   async (): Promise<Project[]> => {
-    const response =
-      await api.get<ProjectsResponse>(
-        "/projects/featured"
-      );
-
-    return response.data.data;
+    return projects
+      .filter(
+        (project) =>
+          project.featured
+      )
+      .sort(byOrderAscending);
   };
-
