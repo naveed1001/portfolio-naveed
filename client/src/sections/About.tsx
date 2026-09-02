@@ -112,8 +112,8 @@ const About = () => {
             </p>
 
             <p className="mt-5 text-base leading-8 text-[var(--muted)] sm:text-lg">
-              Right now I lead development on Private
-              Jet One Ways, an aviation booking platform
+              Right now I lead development on a
+              confidential aviation charter platform
               with end-to-end Stripe payments, and
               a confidential ad-supported music platform
               serving an 11M+ document catalog. I'm also
