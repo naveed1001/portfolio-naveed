@@ -54,7 +54,6 @@ const projects = [
       "/projects/confidential-aviation-platform/route-map.png",
       "/projects/confidential-aviation-platform/charter-estimate.png",
       "/projects/confidential-aviation-platform/admin-dashboard.png",
-      "/projects/confidential-aviation-platform/admin-flights.png",
     ],
 
     order: 1,
