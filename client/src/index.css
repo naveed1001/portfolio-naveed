@@ -63,6 +63,12 @@ a {
   -webkit-tap-highlight-color: transparent;
 }
 
+/* Tailwind v4's preflight sets buttons to cursor: default. Restore the
+   pointer, while leaving disabled buttons to their own cursor. */
+button:not(:disabled) {
+  cursor: pointer;
+}
+
 ::selection {
   background: var(--accent);
   color: white;
