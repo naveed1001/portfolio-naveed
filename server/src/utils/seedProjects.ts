@@ -83,7 +83,7 @@ const projects = [
     testimonials: [
       {
         quote:
-          "Incredible work! I expected this feature to take around 3–4 weeks to develop and implement, but you delivered it in just one week. Truly impressive work!",
+          "Incredible work! I expected this feature to take around 2 weeks to develop and implement, but you delivered it in just 3 days. Truly impressive work!",
         author: "Client",
         role: "Confidential aviation platform",
         image:
