@@ -7,12 +7,12 @@ dotenv.config();
 
 const projects = [
   {
-    title: "Confidential Project - Aviation Charter Platform",
+    title: "Aviation Charter Platform",
 
     slug: "confidential-aviation-platform",
 
     description:
-      "Client details withheld under NDA. A full-stack private jet charter marketplace that connects operators, brokers and flyers on a single aviation management platform. It handles the entire booking lifecycle, from searching one-way legs to signing the charter contract and settling payment. Stripe powers the money movement end to end, including operator payouts and tokenized broker invoicing.",
+      "A full-stack private jet charter marketplace that connects operators, brokers and flyers on a single aviation management platform. It handles the entire booking lifecycle, from searching one-way legs to signing the charter contract and settling payment. Stripe powers the money movement end to end, including operator payouts and tokenized broker invoicing.",
 
     technologies: [
       "React",
@@ -297,12 +297,12 @@ const projects = [
   },
 
   {
-    title: "Confidential Project - Music Lyrics Platform",
+    title: "Music Lyrics Platform",
 
     slug: "confidential-music-platform",
 
     description:
-      "Client details withheld under NDA. An ad-supported music lyrics platform serving an 11M+ document catalog of songs, artists and albums. The public site is built for organic search, with SEO-optimized ISR and RSC pages, JSON-LD structured data and Core Web Vitals tuning, while revenue comes from Google Ad Manager targeting and PubGuru header bidding. Behind it sits an AI content pipeline and a full admin CMS.",
+      "An ad-supported music lyrics platform serving an 11M+ document catalog of songs, artists and albums. The public site is built for organic search, with SEO-optimized ISR and RSC pages, JSON-LD structured data and Core Web Vitals tuning, while revenue comes from Google Ad Manager targeting and PubGuru header bidding. Behind it sits an AI content pipeline and a full admin CMS.",
 
     technologies: [
       "Next.js",

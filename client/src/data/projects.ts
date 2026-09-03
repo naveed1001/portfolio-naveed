@@ -4,7 +4,7 @@ export const projects: Project[] = [
   {
     _id: "confidential-aviation-platform",
 
-    title: "Confidential Project - Aviation Charter Platform",
+    title: "Aviation Charter Platform",
 
     slug: "confidential-aviation-platform",
 
@@ -298,7 +298,7 @@ export const projects: Project[] = [
   {
     _id: "confidential-music-platform",
 
-    title: "Confidential Project - Music Lyrics Platform",
+    title: "Music Lyrics Platform",
 
     slug: "confidential-music-platform",
 
