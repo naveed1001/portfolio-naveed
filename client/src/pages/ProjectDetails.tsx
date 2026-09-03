@@ -17,6 +17,7 @@ import {
 
 import {
   Link,
+  useNavigate,
   useParams,
 } from "react-router-dom";
 
@@ -41,6 +42,8 @@ const ProjectDetails = () => {
     useParams<{
       slug: string;
     }>();
+
+  const navigate = useNavigate();
 
   const [
     project,
@@ -133,14 +136,14 @@ const ProjectDetails = () => {
               available.
             </p>
 
-            <Link
-              to="/#projects"
+            <button
+              onClick={() => navigate(-1)}
               className="mt-7 inline-flex items-center gap-2 rounded-xl bg-[var(--foreground)] px-5 py-3 text-sm font-semibold text-[var(--background)]"
             >
               <ArrowLeft size={16} />
 
               Back to Projects
-            </Link>
+            </button>
           </div>
         </Container>
       </main>
@@ -161,8 +164,8 @@ const ProjectDetails = () => {
             x: 0,
           }}
         >
-          <Link
-            to="/#projects"
+          <button
+            onClick={() => navigate(-1)}
             className="group inline-flex items-center gap-2 text-sm font-medium text-[var(--muted)] transition hover:text-[var(--foreground)]"
           >
             <ArrowLeft
@@ -171,7 +174,7 @@ const ProjectDetails = () => {
             />
 
             Back to Projects
-          </Link>
+          </button>
         </motion.div>
 
         {/* Hero */}
