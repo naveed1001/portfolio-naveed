@@ -48,7 +48,7 @@ export const projects: Project[] = [
     gallery: [
       "/projects/confidential-aviation-platform/booking-search.png",
       "/projects/confidential-aviation-platform/flight-results.png",
-      "/projects/confidential-aviation-platform/route-map.png",
+      "/projects/confidential-aviation-platform/route-map-video.webm",
       "/projects/confidential-aviation-platform/charter-estimate.png",
       "/projects/confidential-aviation-platform/admin-dashboard.png",
     ],
@@ -84,9 +84,9 @@ export const projects: Project[] = [
         author: "Client",
         role: "Confidential aviation platform",
         image:
-          "/projects/confidential-aviation-platform/route-map.png",
+          "/projects/confidential-aviation-platform/route-map-video.webm",
         imageCaption:
-          "The flight route map this feedback refers to: the aircraft animates along the route from the departure airport to the arrival airport.",
+          "The flight route map this feedback refers to: Designed and developed a custom, visually engaging flight route map based on client requirements, featuring an animated aircraft that dynamically travels along the route from the departure airport to the arrival airport.",
       },
     ],
   },

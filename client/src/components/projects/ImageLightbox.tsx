@@ -84,29 +84,45 @@ const ImageLightbox = ({
           </button>
         )}
 
-        {/* Image */}
-        <motion.img
-          key={image}
-          initial={{
-            opacity: 0,
-            scale: 0.96,
-          }}
-          animate={{
-            opacity: 1,
-            scale: 1,
-          }}
-          transition={{
-            duration: 0.25,
-          }}
-          src={image}
-          alt={`Project screenshot ${
-            activeIndex + 1
-          }`}
-          onClick={(event) =>
-            event.stopPropagation()
-          }
-          className="max-h-[85vh] max-w-[92vw] rounded-xl object-contain shadow-2xl"
-        />
+        {/* Media */}
+        {image.endsWith(".webm") ? (
+          <motion.video
+            key={image}
+            initial={{ opacity: 0, scale: 0.96 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.25 }}
+            src={image}
+            autoPlay
+            loop
+            muted
+            playsInline
+            onClick={(event) => event.stopPropagation()}
+            className="max-h-[85vh] max-w-[92vw] rounded-xl object-contain shadow-2xl"
+          />
+        ) : (
+          <motion.img
+            key={image}
+            initial={{
+              opacity: 0,
+              scale: 0.96,
+            }}
+            animate={{
+              opacity: 1,
+              scale: 1,
+            }}
+            transition={{
+              duration: 0.25,
+            }}
+            src={image}
+            alt={`Project screenshot ${
+              activeIndex + 1
+            }`}
+            onClick={(event) =>
+              event.stopPropagation()
+            }
+            className="max-h-[85vh] max-w-[92vw] rounded-xl object-contain shadow-2xl"
+          />
+        )}
 
         {/* Next */}
         {images.length > 1 && (

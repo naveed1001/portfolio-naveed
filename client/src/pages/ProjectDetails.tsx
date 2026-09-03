@@ -598,7 +598,7 @@ const ProjectDetails = () => {
                         delay:
                           index * 0.08,
                       }}
-                      className="rounded-3xl border border-[var(--border)] bg-white/[0.02] p-7 sm:p-9"
+                      className="mx-auto w-full max-w-3xl rounded-3xl border border-[var(--border)] bg-white/[0.02] p-7 sm:p-9"
                     >
                       <Quote
                         size={20}
@@ -613,17 +613,28 @@ const ProjectDetails = () => {
 
                       {testimonial.image && (
                         <figure className="mt-6 overflow-hidden rounded-2xl border border-[var(--border)] bg-white/[0.02]">
-                          <img
-                            src={
-                              testimonial.image
-                            }
-                            alt={
-                              testimonial.imageCaption ??
-                              "Screenshot of the work this feedback refers to"
-                            }
-                            loading="lazy"
-                            className="block h-auto w-full"
-                          />
+                          {testimonial.image.endsWith(".webm") ? (
+                            <video
+                              src={testimonial.image}
+                              autoPlay
+                              loop
+                              muted
+                              playsInline
+                              className="block h-auto w-full"
+                            />
+                          ) : (
+                            <img
+                              src={
+                                testimonial.image
+                              }
+                              alt={
+                                testimonial.imageCaption ??
+                                "Screenshot of the work this feedback refers to"
+                              }
+                              loading="lazy"
+                              className="block h-auto w-full"
+                            />
+                          )}
 
                           {testimonial.imageCaption && (
                             <figcaption className="border-t border-[var(--border)] px-5 py-4 text-xs leading-6 text-[var(--muted)]">

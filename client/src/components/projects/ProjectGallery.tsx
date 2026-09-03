@@ -94,13 +94,24 @@ const ProjectGallery = ({
                   : ""
               }`}
             >
-              <img
-                src={image}
-                alt={`${title} screenshot ${
-                  index + 1
-                }`}
-                className="block h-auto w-full transition duration-700 group-hover:scale-[1.03]"
-              />
+              {image.endsWith(".webm") ? (
+                <video
+                  src={image}
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="block h-auto w-full transition duration-700 group-hover:scale-[1.03]"
+                />
+              ) : (
+                <img
+                  src={image}
+                  alt={`${title} screenshot ${
+                    index + 1
+                  }`}
+                  className="block h-auto w-full transition duration-700 group-hover:scale-[1.03]"
+                />
+              )}
 
               <div className="absolute inset-0 flex items-center justify-center bg-black/0 transition duration-300 group-hover:bg-black/30">
                 <div className="flex h-11 w-11 scale-90 items-center justify-center rounded-full border border-white/10 bg-black/40 text-white opacity-0 backdrop-blur-md transition duration-300 group-hover:scale-100 group-hover:opacity-100">

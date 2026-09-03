@@ -74,15 +74,26 @@ const Testimonials = () => {
 
                 {item.image && (
                   <figure className="mt-7 overflow-hidden rounded-2xl border border-[var(--border)] bg-white/[0.02]">
-                    <img
-                      src={item.image}
-                      alt={
-                        item.imageCaption ??
-                        "Screenshot of the work this feedback refers to"
-                      }
-                      loading="lazy"
-                      className="block h-auto w-full"
-                    />
+                    {item.image.endsWith(".webm") ? (
+                      <video
+                        src={item.image}
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        className="block h-auto w-full"
+                      />
+                    ) : (
+                      <img
+                        src={item.image}
+                        alt={
+                          item.imageCaption ??
+                          "Screenshot of the work this feedback refers to"
+                        }
+                        loading="lazy"
+                        className="block h-auto w-full"
+                      />
+                    )}
 
                     {item.imageCaption && (
                       <figcaption className="border-t border-[var(--border)] px-5 py-4 text-xs leading-6 text-[var(--muted)]">
