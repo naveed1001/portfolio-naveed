@@ -9,7 +9,7 @@ export const projects: Project[] = [
     slug: "confidential-aviation-platform",
 
     description:
-      "Client details withheld under NDA. A full-stack private jet charter marketplace that connects operators, brokers and flyers on a single aviation management platform. It handles the entire booking lifecycle, from searching one-way legs to signing the charter contract and settling payment. Stripe powers the money movement end to end, including operator payouts and tokenized broker invoicing.",
+      "A full-stack private jet charter marketplace that connects operators, brokers and flyers on a single aviation management platform. It handles the entire booking lifecycle, from searching one-way legs to signing the charter contract and settling payment. Stripe powers the money movement end to end, including operator payouts and tokenized broker invoicing.",
 
     technologies: [
       "React",
@@ -56,7 +56,7 @@ export const projects: Project[] = [
     order: 1,
 
     overview:
-      "Client details are withheld under NDA. This is the aviation platform I lead end to end at TheCloudOps: a full-stack aviation management product built with React, Node.js and Express on a MySQL data layer. Operators publish one-way availability, brokers invoice their own clients, and flyers search, hold and book an aircraft in one flow. The hard parts are not the screens but the guarantees behind them, keeping a single aircraft from being sold twice while a checkout is in flight, and making sure money is only captured once the owner has approved the trip and the contract has been signed.",
+      "This is the aviation platform I lead end to end at TheCloudOps: a full-stack aviation management product built with React, Node.js and Express on a MySQL data layer. Operators publish one-way availability, brokers invoice their own clients, and flyers search, hold and book an aircraft in one flow. The hard parts are not the screens but the guarantees behind them, keeping a single aircraft from being sold twice while a checkout is in flight, and making sure money is only captured once the owner has approved the trip and the contract has been signed.",
 
     challenges: [
       "Preventing double-booking when several flyers start checkout on the same aircraft at the same time",
@@ -99,7 +99,7 @@ export const projects: Project[] = [
     slug: "confidential-ai-platform",
 
     description:
-      "Client details withheld under NDA. A production-oriented AI platform, grown capability by capability from rule-based intent detection into a full retrieval-augmented system with streaming responses, controlled tool calling and bounded agents. Every layer is engineered for control rather than raw generation: grounded answers with citations, authorization gates before any tool runs, token budgets and step-level observability.",
+      "A production-oriented AI platform, grown capability by capability from rule-based intent detection into a full retrieval-augmented system with streaming responses, controlled tool calling and bounded agents. Every layer is engineered for control rather than raw generation: grounded answers with citations, authorization gates before any tool runs, token budgets and step-level observability.",
 
     technologies: [
       "TypeScript",
@@ -141,7 +141,7 @@ export const projects: Project[] = [
     order: 2,
 
     overview:
-      "Client details are withheld under NDA. I developed and contributed to a production-oriented AI platform, adding one AI capability at a time rather than shipping a single chatbot: keyword-based intent detection with Gemini responses first, then structured output schemas, an end-to-end Retrieval-Augmented Generation pipeline, streaming over Server-Sent Events, a controlled tool-calling registry, a bounded agent loop, and finally guardrails, cost monitoring and a non-generative recommendation system. The focus throughout was reliability, controlled AI behavior, security, observability and practical production use cases, treating the model as one component inside an engineered system rather than an API call that is trusted to do the right thing.",
+      "I developed and contributed to a production-oriented AI platform, adding one AI capability at a time rather than shipping a single chatbot: keyword-based intent detection with Gemini responses first, then structured output schemas, an end-to-end Retrieval-Augmented Generation pipeline, streaming over Server-Sent Events, a controlled tool-calling registry, a bounded agent loop, and finally guardrails, cost monitoring and a non-generative recommendation system. The focus throughout was reliability, controlled AI behavior, security, observability and practical production use cases, treating the model as one component inside an engineered system rather than an API call that is trusted to do the right thing.",
 
     capabilities: [
       {
@@ -303,7 +303,7 @@ export const projects: Project[] = [
     slug: "confidential-music-platform",
 
     description:
-      "Client details withheld under NDA. An ad-supported music lyrics platform serving an 11M+ document catalog of songs, artists and albums. The public site is built for organic search, with SEO-optimized ISR and RSC pages, JSON-LD structured data and Core Web Vitals tuning, while revenue comes from Google Ad Manager targeting and PubGuru header bidding. Behind it sits an AI content pipeline and a full admin CMS.",
+      "An ad-supported music lyrics platform serving an 11M+ document catalog of songs, artists and albums. The public site is built for organic search, with SEO-optimized ISR and RSC pages, JSON-LD structured data and Core Web Vitals tuning, while revenue comes from Google Ad Manager targeting and PubGuru header bidding. Behind it sits an AI content pipeline and a full admin CMS.",
 
     technologies: [
       "Next.js",
@@ -342,7 +342,7 @@ export const projects: Project[] = [
     order: 3,
 
     overview:
-      "Client details are withheld under NDA. This is an ad-supported music lyrics platform where I drive full-stack development at TheCloudOps. The catalog is the product, more than 11 million song, artist and album documents that have to be crawlable, fast and monetized at the same time. My work spans the rendering strategy for those pages, the AI pipelines that enrich them with song meanings and news, the ad stack that pays for them, and the admin CMS the editorial team uses to run the whole thing.",
+      "This is an ad-supported music lyrics platform where I drive full-stack development at TheCloudOps. The catalog is the product, more than 11 million song, artist and album documents that have to be crawlable, fast and monetized at the same time. My work spans the rendering strategy for those pages, the AI pipelines that enrich them with song meanings and news, the ad stack that pays for them, and the admin CMS the editorial team uses to run the whole thing.",
 
     challenges: [
       "Query times of around 300ms against a 7M+ document catalog spread across scattered staging collections",
