@@ -20,33 +20,48 @@ interface Role {
 
 const roles: Role[] = [
   {
-    company: "TheCloudOps",
-    role: "Senior MERN Stack Developer / Team Lead",
-    period: "September 2025 — Present",
-    location: "Lahore, Punjab",
+    company: "Leaders Performance",
+    role: "Full Stack AI Engineer",
+    period: "October 2026 — Present",
+    location: "Dubai · Remote from Lahore",
     current: true,
     points: [
-      "Leading a development team as the primary technical point of contact for clients — gathering requirements, translating business needs into technical solutions and owning delivery end to end.",
-      "Leading the end-to-end development of a confidential full-stack aviation management platform built with the MERN stack, supporting a real-time flight booking and management system.",
-      "Driving full-stack development of a confidential ad-supported music lyrics platform with an 11M+ document catalog, owning AI-powered ad targeting, header-bidding integration, SEO optimization and large-scale MongoDB migrations.",
-      "Setting the technical direction across both platforms — architecture, payment and concurrency guarantees, and the AI capabilities layered on top — and taking each from concept to production.",
+      "Building a private AI agent platform as a full-stack engineer, taking features from technical design to production.",
+      "Designing the agent architecture and LLM-driven workflows: reliable conversations, memory, and human review and approval built into the flow.",
+      "Implementing secure access control and data privacy boundaries, and building fault-tolerant features with a focus on data integrity.",
+      "Evaluating third-party integrations for feasibility, security and cost, and backing technical decisions with test evidence when working with cross-functional teams.",
     ],
   },
   {
-    company: "OIOI Group",
-    role: "MERN Stack Developer",
-    period: "October 2024 — August 2025",
+    company: "TheCloudOps",
+    role: "Senior MERN Stack Developer / Full-Stack Developer / Team Lead",
+    period: "December 2024 — September 2026",
     location: "Lahore, Punjab",
     current: false,
     points: [
-      "Developed the Bike Inventory System to optimize warehouse operations with MySQL-backed inventory tracking, secure CRUD APIs and real-time transfer logging.",
-      "Deployed and managed cloud-based solutions on AWS to ensure scalability and high availability.",
+      "Led a development team as the primary technical point of contact for clients — gathering requirements, translating business needs into technical solutions and owning delivery end to end.",
+      "Led the end-to-end development of a full-stack aviation management platform built with the MERN stack, supporting a real-time flight booking and management system.",
+      "Drove full-stack development of an ad-supported music lyrics platform with an 11M+ document catalog, owning AI-powered ad targeting, header-bidding integration, SEO optimization and large-scale MongoDB migrations.",
+      "Set the technical direction across both platforms — architecture, payment and concurrency guarantees, and the AI capabilities layered on top — and took each from concept to production.",
+    ],
+  },
+  {
+    company: "OIOI Group (MARUI)",
+    role: "MERN Stack Developer",
+    period: "November 2023 — November 2024",
+    location: "Lahore, Punjab",
+    current: false,
+    points: [
+      "Led the complete development of the OIOI Bike Inventory System to improve inventory management and warehouse operations, with MySQL-backed inventory tracking, secure APIs and real-time transfer logging.",
+      "Designed a microservices architecture in Node.js, connecting services over REST APIs and RabbitMQ for event-driven communication.",
+      "Packaged services in Docker containers and built API gateways with service discovery for efficient routing.",
+      "Deployed on AWS (EC2, S3, Lambda) for high availability and scale, and added Redis caching and real-time data processing to cut latency.",
     ],
   },
   {
     company: "KOT Enterprises",
     role: "Junior MERN Stack Developer",
-    period: "November 2023 — September 2024",
+    period: "September 2022 — October 2023",
     location: "Lahore, Punjab",
     current: false,
     points: [
@@ -70,12 +85,13 @@ const Experience = () => {
           </h2>
 
           <p className="mt-5 text-base leading-8 text-[var(--muted)]">
-            3+ years building production web
-            applications across aviation, music
-            and inventory platforms — now leading
-            a development team and owning
-            delivery from requirements to
-            production.
+            4+ years building production web
+            applications and AI systems across
+            aviation, inventory management, digital
+            media and AI — leading development
+            teams, working directly with clients
+            and owning delivery from requirements
+            to production.
           </p>
         </div>
 

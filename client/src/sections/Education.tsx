@@ -1,13 +1,34 @@
 import {
   BookOpen,
+  Code2,
   GraduationCap,
   MapPin,
+  Megaphone,
 } from "lucide-react";
 
 import { motion } from "framer-motion";
 
 import Container from "../components/ui/Container";
 import Section from "../components/ui/Section";
+
+const courses = [
+  {
+    icon: Megaphone,
+    institution: "University of Leeds",
+    title: "Short Courses",
+    period: "2019 — 2020",
+    description:
+      "Public Relations, Advertising and Applied Communication — the foundation for client-facing technical work.",
+  },
+  {
+    icon: Code2,
+    institution: "JDC Foundation Pakistan",
+    title: "Frontend Development Course",
+    period: "May 2022 — Aug 2022",
+    description:
+      "An intensive, project-based course in HTML, CSS, JavaScript and responsive design, with a focus on clean, maintainable code.",
+  },
+];
 
 const Education = () => {
   return (
@@ -26,7 +47,7 @@ const Education = () => {
             A physics background that sharpened
             analytical thinking and structured
             problem-solving, paired with software
-            engineering skills built over 3+ years of
+            engineering skills built over 4+ years of
             professional work.
           </p>
         </div>
@@ -146,6 +167,59 @@ const Education = () => {
             </div>
           </div>
         </motion.div>
+
+        {/* Courses */}
+        <div className="mt-5 grid gap-5 sm:grid-cols-2">
+          {courses.map(
+            (course, index) => {
+              const Icon = course.icon;
+
+              return (
+                <motion.div
+                  key={course.institution}
+                  initial={{
+                    opacity: 0,
+                    y: 25,
+                  }}
+                  whileInView={{
+                    opacity: 1,
+                    y: 0,
+                  }}
+                  viewport={{
+                    once: true,
+                  }}
+                  transition={{
+                    duration: 0.5,
+                    delay: index * 0.08,
+                  }}
+                  className="rounded-3xl border border-[var(--border)] bg-white/[0.02] p-6 transition duration-300 hover:border-violet-500/20 hover:bg-white/[0.035] sm:p-7"
+                >
+                  <div className="flex items-start justify-between gap-4">
+                    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-violet-500/20 bg-violet-500/10 text-violet-400">
+                      <Icon size={20} />
+                    </div>
+
+                    <span className="w-fit rounded-full border border-[var(--border)] px-3 py-1.5 text-xs font-medium text-[var(--muted)]">
+                      {course.period}
+                    </span>
+                  </div>
+
+                  <p className="mt-5 text-sm font-medium text-violet-400">
+                    {course.title}
+                  </p>
+
+                  <h3 className="mt-1 text-lg font-bold">
+                    {course.institution}
+                  </h3>
+
+                  <p className="mt-3 text-sm leading-7 text-[var(--muted)]">
+                    {course.description}
+                  </p>
+                </motion.div>
+              );
+            }
+          )}
+        </div>
       </Container>
     </Section>
   );

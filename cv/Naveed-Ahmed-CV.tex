@@ -1,0 +1,251 @@
+%-------------------------
+% Resume in LaTeX
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+%---------- FONT OPTIONS ----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+%---------- PAGE SETUP ----------
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+%---------- SECTION FORMATTING ----------
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure PDF is machine-readable / ATS parsable
+\pdfgentounicode=1
+
+%---------- CUSTOM COMMANDS ----------
+\newcommand{\resumeItem}[1]{\item\small{{#1 \vspace{-2pt}}}}
+
+\newcommand{\classesList}[4]{\item\small{{#1 #2 #3 #4 \vspace{-2pt}}}}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+  \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & \textbf{\small #2} \\
+    \textit{\small #3} & \textit{\small #4} \\
+  \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+  \item
+  \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    \textit{\small #1} & \textit{\small #2} \\
+  \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+  \item
+  \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+    \small #1 & \textbf{\small #2} \\
+  \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%---------- HEADING ----------
+\begin{center}
+  {\Huge \scshape Naveed Ahmed} \\ \vspace{1pt}
+  Full Stack AI Engineer $|$ Lahore, Pakistan \\ \vspace{1pt}
+  \small
+  \raisebox{-0.1\height}\faPhone\ +92-345-4510124 ~
+  \href{mailto:naveedmotha.dev@gmail.com}
+    {\raisebox{-0.2\height}\faEnvelope\ \underline{naveedmotha.dev@gmail.com}} ~
+  \href{https://linkedin.com/in/naveedahmed10001}
+    {\raisebox{-0.2\height}\faLinkedin\ \underline{linkedin.com/in/naveedahmed10001}} ~
+  \href{https://github.com/naveed1001}
+    {\raisebox{-0.2\height}\faGithub\ \underline{github.com/naveed1001}} ~
+  \href{https://portfolio-naveed.vercel.app/}
+    {\raisebox{-0.2\height}\faGlobe\ \underline{portfolio-naveed.vercel.app}}
+  \vspace{-8pt}
+\end{center}
+
+%---------- PROFESSIONAL SUMMARY ----------
+\section{Professional Summary}
+
+Full Stack AI Engineer with 4+ years of experience building scalable web applications, enterprise software, and production AI systems. Currently building a private AI agent platform at Leaders Performance (Dubai, remote), covering agent architecture, reliable conversations and memory, data privacy boundaries, and human approval workflows. Hands-on with LLM integration, Retrieval-Augmented Generation (RAG), AI agents with tool calling, structured LLM outputs, real-time streaming, and voice input, on a full-stack foundation. Experienced in leading development teams, acting as the primary technical contact for clients, and taking products from concept to production across aviation, inventory management, digital media, and AI.
+
+\vspace{-2pt}
+
+%---------- TECHNICAL SKILLS ----------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \small{\item{
+    \textbf{Languages}{: HTML, CSS, JavaScript, TypeScript, Python} \\
+    \textbf{Frameworks \& Libraries}{: React.js, Next.js, Node.js, Express.js, NestJS, Django, Redux Toolkit, Tailwind CSS, Bootstrap} \\
+    \textbf{AI Engineering}{: LLM Integration, Generative AI, AI Agents, Tool Calling, RAG, Embeddings, Vector Search, Structured Output, SSE Streaming, Speech Recognition, Agent Memory, Human-in-the-Loop, Guardrails, Recommendations} \\
+    \textbf{Databases}{: MongoDB, MySQL, PostgreSQL (pgvector), Supabase} \\
+    \textbf{Messaging \& Caching}{: Redis, RabbitMQ, BullMQ} \\
+    \textbf{Cloud \& DevOps}{: AWS (EC2, S3, Lambda), Docker, Microservices, API Gateways, CI/CD Pipelines} \\
+    \textbf{Tools}{: Git, GitHub, Postman, JIRA, ClickUp, Claude, Cursor} \\
+  }}
+\end{itemize}
+
+%---------- EXPERIENCE ----------
+\section{Experience}
+\resumeSubHeadingListStart
+
+  \resumeSubheading
+    {Leaders Performance}{October 2026 -- Present}
+    {Full Stack AI Engineer}{Dubai, UAE (Remote)}
+    \vspace{-2pt}
+  \resumeItemListStart
+    \resumeItem{Building a private AI agent platform as a full-stack engineer, taking features from technical design to production-ready releases.}
+    \resumeItem{Designing the AI agent architecture and LLM-driven workflows, including reliable conversations, memory, and human review and approval steps.}
+    \resumeItem{Implementing secure access control and data privacy boundaries, and building fault-tolerant features with a focus on data integrity.}
+    \resumeItem{Evaluating third-party integrations for feasibility, security, and cost, and backing technical decisions with test evidence alongside cross-functional teams.}
+  \resumeItemListEnd
+
+  \resumeSubheading
+    {TheCloudOps}{December 2024 -- September 2026}
+    {Senior MERN Stack Developer / Full-Stack Developer / Team Lead}{Lahore, Punjab}
+    \vspace{-2pt}
+  \resumeItemListStart
+    \resumeItem{Led the end-to-end development of a {\textbf{Private Jet Aviation Charter Platform}}, a full-stack aviation management platform supporting real-time flight booking and management.}
+    \resumeItem{Drove full-stack development of an {\textbf{Ad-Supported Music Platform}} with an 11M+ document catalog, owning AI-powered ad targeting, header-bidding integration, SEO optimization, and large-scale MongoDB migrations.}
+    \resumeItem{Implemented AI-powered features, including AI-driven advertising and intelligent application capabilities, using RAG, embeddings, vector search, tool/function calling, and AI agents.}
+    \resumeItem{Led and mentored the development team through code reviews, technical guidance, and breaking complex requirements into actionable tasks, keeping engineering practices scalable and maintainable.}
+    \resumeItem{Acted as the primary technical point of contact for clients, gathering requirements, translating business needs into technical solutions, and ensuring on-time delivery.}
+  \resumeItemListEnd
+
+  \resumeSubheading
+    {OIOI Group (MARUI)}{November 2023 -- November 2024}
+    {MERN Stack Developer}{Lahore, Punjab}
+    \vspace{-2pt}
+  \resumeItemListStart
+    \resumeItem{Led the complete development of the OIOI Bike Inventory System, streamlining warehouse operations, inventory tracking, stock movement, and transfer management with real-time transfer logging.}
+    \resumeItem{Built secure APIs over a MySQL inventory database, with validation and access controls for creating, updating, retrieving, and deleting inventory records.}
+    \resumeItem{Designed a Node.js microservices architecture connected through REST APIs and RabbitMQ for event-driven communication, packaged in Docker containers behind API gateways with service discovery.}
+    \resumeItem{Deployed and managed the system on AWS (EC2, S3, Lambda) for high availability and scalability, and added Redis caching and real-time data processing to reduce latency.}
+    \resumeItem{Collaborated with cross-functional teams to understand business requirements, troubleshoot technical issues, and deliver maintainable, production-ready software.}
+  \resumeItemListEnd
+
+  \resumeSubheading
+    {KOT Enterprises}{September 2022 -- October 2023}
+    {Junior MERN Stack Developer}{Lahore, Punjab}
+    \vspace{-2pt}
+  \resumeItemListStart
+    \resumeItem{Developed and maintained backend services and RESTful APIs using Node.js and Express.js, supporting scalable and maintainable web application architectures.}
+    \resumeItem{Designed and implemented MongoDB database schemas, models, and queries, ensuring efficient data storage, retrieval, and management across application modules.}
+    \resumeItem{Built and integrated RESTful APIs for core application features, implementing request validation, error handling, authentication, and reliable communication between frontend and backend systems.}
+    \resumeItem{Contributed to the development of responsive and interactive frontend applications using React.js, JavaScript, and Tailwind CSS.}
+  \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+\vspace{-10pt}
+
+%---------- PROJECTS ----------
+\section{Featured Projects}
+\vspace{-2pt}
+\resumeSubHeadingListStart
+
+  \resumeProjectHeading
+    {\textbf{Private Jet Aviation Platform} $|$ \emph{React, TypeScript, Node.js, Express.js, MySQL, Stripe, AWS}}{}
+  \resumeItemListStart
+    \resumeItem{Developed a full-stack private jet charter marketplace connecting operators, brokers, and flyers.}
+    \resumeItem{Engineered Stripe payments end-to-end: authorize-then-capture checkout with SHA-256 idempotency keys, Connect Express operator payouts with instant-payout auto-fallback, and tokenized broker invoicing.}
+    \resumeItem{Designed a concurrency-safe booking engine with 15-minute soft locks preventing double-booking, a 6-step checkout (in-app PDF contract signing, card/wire/balance payments), and owner-approval payment holds.}
+  \resumeItemListEnd
+
+  \vspace{-10pt}
+
+  \resumeProjectHeading
+    {\textbf{Ad-Supported Music Platform} $|$ \emph{Next.js, TypeScript, NestJS, MongoDB, Redis, BullMQ}}{}
+  \resumeItemListStart
+    \resumeItem{Developed an ad-supported music lyrics platform serving an 11M+ document catalog (songs, artists, albums) with SEO-optimized ISR/RSC pages, JSON-LD structured data, and Core Web Vitals tuning.}
+    \resumeItem{Engineered AI content pipelines (song meanings, news) using Gemini, Vertex AI batch jobs, and BullMQ; implemented Google Ad Manager key-value targeting and rolled out PubGuru header bidding to production in phases.}
+    \resumeItem{Built an admin CMS with role-based access control, AI article generation and scheduling, a batch-job operations console, and a UGC moderation suite.}
+    \resumeItem{Cut API query times by 83\% (300ms to 50ms) by consolidating a 7M+ document catalog from scattered staging collections into 3 core MongoDB collections with indexed ID-based lookups.}
+  \resumeItemListEnd
+
+  \vspace{-10pt}
+
+  \resumeProjectHeading
+    {\textbf{Enterprise Knowledge Intelligence Platform} $|$ \emph{React, TypeScript, Python, Django, pgvector, Gemini, RAG}}{}
+  \resumeItemListStart
+    \resumeItem{Built a production-oriented AI platform, progressively implementing LLM capabilities including intent detection, structured outputs, RAG, streaming, tool calling, and AI agents.}
+    \resumeItem{Designed and implemented an end-to-end Retrieval-Augmented Generation (RAG) pipeline, including document chunking, embeddings, semantic retrieval, relevance thresholds, grounded response generation, and citations.}
+    \resumeItem{Improved retrieval quality through heading-aware chunking, lazy query rewriting, and retrieval memory, so responses are grounded in relevant knowledge rather than blindly retrieved content.}
+    \resumeItem{Developed a bounded multi-step AI agent architecture with execution limits, no-progress detection, and step-level tracing for reliable and observable agent execution.}
+    \resumeItem{Implemented AI guardrails and cost controls, including token budgets, usage monitoring, backend-secured API credentials, and protections against uncontrolled model execution.}
+  \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+\vspace{-10pt}
+
+%---------- EDUCATION ----------
+\section{Education}
+\resumeSubHeadingListStart
+
+  \resumeSubheading
+    {Government College University (GCU), Lahore}{September 2016 -- July 2020}
+    {B.Sc. (Hons.) Physics}{Lahore, Pakistan}
+    \vspace{-5pt}
+  \resumeItemListStart
+    \resumeItem{Authored a B.Sc. (Hons.) thesis, \textit{``Different Attempts To Make Quantum Computers and Computation a Reality,''} analyzing how computers process and represent information, from classical architecture (binary, logic gates, transistors, CPU, memory, data encoding) to emerging quantum models (qubits, superposition, entanglement, quantum logic gates).}
+  \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+\end{document}

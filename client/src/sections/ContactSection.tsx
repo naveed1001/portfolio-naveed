@@ -65,10 +65,10 @@ const ContactSection = () => {
           </h2>
 
           <p className="mt-5 max-w-2xl text-base leading-8 text-[var(--muted)] sm:text-lg">
-            I'm open to senior engineering and team
-            lead roles, consulting engagements, and
-            long-term collaborations where I can
-            architect and ship production MERN
+            I'm open to AI engineering and senior
+            full-stack roles, consulting engagements,
+            and long-term collaborations where I can
+            architect and ship production AI and web
             systems end to end.
           </p>
         </motion.div>
@@ -122,12 +122,12 @@ const ContactSection = () => {
                 </div>
 
                 <p className="mt-5 max-w-xl text-sm leading-7 text-[var(--muted)] sm:text-base">
-                  With 3+ years building and leading
-                  MERN teams, I help companies design
-                  scalable backends, modernize
-                  existing products, and take
-                  ambitious ideas from concept to
-                  production. Tell me what you're
+                  With 4+ years building production
+                  web platforms and AI systems, I help
+                  companies design AI agents and LLM
+                  workflows, build scalable backends,
+                  and take ambitious ideas from
+                  concept to production. Tell me what you're
                   building and I'll tell you how I'd
                   approach it.
                 </p>
@@ -262,7 +262,7 @@ const ContactSection = () => {
               </div>
 
               <span className="text-xs text-[var(--muted)]">
-                Senior MERN Stack Developer
+                Full Stack AI Engineer
               </span>
             </div>
           </div>

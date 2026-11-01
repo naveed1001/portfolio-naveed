@@ -26,6 +26,28 @@ interface SkillGroup {
 
 const skillGroups: SkillGroup[] = [
   {
+    title: "AI Engineering",
+    description:
+      "Building AI as a controlled system: grounded, bounded, observable and cost aware.",
+    icon: Sparkles,
+    skills: [
+      "LLM Integration",
+      "Generative AI",
+      "AI Agents",
+      "Tool Calling",
+      "RAG",
+      "Embeddings",
+      "Structured Output",
+      "Streaming (SSE)",
+      "Speech Recognition",
+      "Agent Memory",
+      "Human-in-the-Loop",
+      "Guardrails",
+      "Recommendations",
+    ],
+  },
+
+  {
     title: "Frontend",
     description:
       "Building responsive, SEO-friendly interfaces with React and Next.js.",
@@ -53,7 +75,10 @@ const skillGroups: SkillGroup[] = [
       "Express.js",
       "NestJS",
       "REST APIs",
+      "Microservices",
+      "API Gateways",
       "JWT Authentication",
+      "Access Control",
       "BullMQ",
     ],
   },
@@ -77,30 +102,12 @@ const skillGroups: SkillGroup[] = [
   },
 
   {
-    title: "AI Engineering",
-    description:
-      "Building AI as a controlled system: grounded, bounded, observable and cost aware.",
-    icon: Sparkles,
-    skills: [
-      "LLM Integration",
-      "Structured Output",
-      "RAG",
-      "Embeddings",
-      "Streaming (SSE)",
-      "Tool Calling",
-      "AI Agents",
-      "Guardrails",
-      "Recommendations",
-    ],
-  },
-
-  {
     title: "DevOps & Cloud",
     description:
       "Shipping and running applications on AWS with Docker and CI/CD.",
     icon: GitBranch,
     skills: [
-      "AWS",
+      "AWS (EC2, S3, Lambda)",
       "Docker",
       "CI/CD Pipelines",
       "Git",
@@ -162,9 +169,9 @@ const SkillsSection = () => {
           </h2>
 
           <p className="mt-5 max-w-2xl text-sm leading-7 text-[var(--muted)] sm:text-base">
-            The stack I use day to day, from interface and
-            API design through to databases, AI systems
-            and cloud deployment.
+            The stack I use day to day, from AI agents and
+            LLM workflows through to interfaces, APIs,
+            databases and cloud deployment.
           </p>
         </motion.div>
 

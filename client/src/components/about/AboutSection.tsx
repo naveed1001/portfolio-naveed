@@ -44,11 +44,11 @@ const AboutSection = () => {
           </div>
 
           <h2 className="mt-5 max-w-3xl text-3xl font-black tracking-tight sm:text-4xl lg:text-5xl">
-            Building modern web applications with{" "}
+            Building{" "}
             <span className="text-violet-400">
-              clean architecture
+              production AI systems
             </span>{" "}
-            and purposeful design.
+            on solid full-stack foundations.
           </h2>
         </motion.div>
 
@@ -79,39 +79,48 @@ const AboutSection = () => {
               />
 
               <h3 className="text-lg font-bold">
-                Senior MERN Stack Developer & Team Lead
+                Full Stack AI Engineer
               </h3>
             </div>
 
             <div className="mt-7 space-y-5 text-sm leading-8 text-[var(--muted)] sm:text-base">
               <p>
-                I'm Naveed Ahmed, a Senior MERN Stack
-                Developer and Team Lead at TheCloudOps
-                with 3+ years of professional
-                experience building scalable web
-                applications across React, Node.js,
-                NestJS, MongoDB and MySQL.
+                I'm Naveed Ahmed, a Full Stack AI
+                Engineer with 4+ years of experience
+                building scalable web applications,
+                enterprise software and production AI
+                systems. I currently work with Leaders
+                Performance (Dubai), remotely from
+                Lahore, building a private AI agent
+                platform — the agent architecture,
+                reliable conversations and memory,
+                data privacy boundaries, human
+                approval workflows and integration
+                planning.
               </p>
 
               <p>
-                I build production platforms end to
-                end — a private jet charter
-                marketplace with a concurrency-safe
-                booking engine and full Stripe
-                payments, and an ad-supported lyrics
+                My AI work covers LLM integration,
+                Retrieval-Augmented Generation (RAG),
+                AI agents with tool calling,
+                structured LLM outputs, real-time
+                streaming and voice input. On the
+                full-stack side I work with React,
+                Next.js, Node.js, NestJS, Express.js,
+                TypeScript, MongoDB, MySQL, Redis,
+                Docker and AWS.
+              </p>
+
+              <p>
+                Before that I led development teams
+                and was the primary technical contact
+                for clients, taking a private jet
+                charter marketplace with full Stripe
+                payments and an ad-supported lyrics
                 platform serving an 11M+ document
-                catalog.
-              </p>
-
-              <p>
-                Day to day I lead the development team
-                and act as the primary technical
-                contact for clients, translating
-                business requirements into technical
-                solutions and tuning systems for
-                performance and scale — including
-                cutting API query times from 300ms to
-                50ms.
+                catalog from concept to production,
+                and cutting API query times from
+                300ms to 50ms along the way.
               </p>
             </div>
 

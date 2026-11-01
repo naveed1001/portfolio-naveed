@@ -68,27 +68,30 @@ const Hero = () => {
             <h1 className="max-w-4xl whitespace-nowrap text-3xl font-bold leading-[1.08] tracking-tight text-[var(--foreground)] sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl">
               Full-stack,{" "}
               <span className="bg-gradient-to-r from-violet-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
-                at scale.
+                AI-native.
               </span>
             </h1>
 
             {/* Description */}
             <p className="mt-7 max-w-2xl text-base leading-7 text-[var(--muted)] sm:text-lg">
-              I'm Naveed Ahmed, a Full-Stack MERN Developer with 3+
-              years of professional experience, currently a Senior MERN
-              Stack Developer and Team Lead at TheCloudOps, architecting
-              scalable web applications and enterprise platforms from
-              concept to production.
+              I'm Naveed Ahmed, a Full Stack AI Engineer with 4+ years
+              of experience building scalable web applications and
+              production AI systems. I'm currently building a private
+              AI agent platform at Leaders Performance (Dubai), from
+              agent architecture and memory to data privacy and human
+              approval workflows.
             </p>
 
             {/* Tags */}
             <div className="mt-7 flex flex-wrap gap-2">
               {[
+                "AI Agents",
+                "LLMs",
+                "RAG",
                 "TypeScript",
                 "React",
                 "Node.js",
                 "NestJS",
-                "MongoDB",
                 "AWS",
               ].map((technology) => (
                 <Badge key={technology}>
@@ -233,7 +236,7 @@ const Hero = () => {
     <p className="pl-4 text-zinc-400 sm:pl-5">
       role:
       <span className="text-emerald-400">
-        {" "}“Senior MERN Developer”
+        {" "}“Full Stack AI Engineer”
       </span>
       ,
     </p>
@@ -249,7 +252,7 @@ const Hero = () => {
     <p className="pl-4 text-zinc-400 sm:pl-5">
       focus:
       <span className="text-emerald-400">
-        {" "}“Scalable Systems”
+        {" "}“AI Agents & RAG”
       </span>
     </p>
 
@@ -310,11 +313,11 @@ const Hero = () => {
 
         <div>
           <p className="text-[11px] font-semibold text-white sm:text-xs">
-            Team Lead
+            AI Engineer
           </p>
 
           <p className="text-[9px] text-zinc-500 sm:text-[11px]">
-            3+ years experience
+            4+ years experience
           </p>
         </div>
       </div>

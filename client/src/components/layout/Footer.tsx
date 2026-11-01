@@ -24,16 +24,16 @@ const Footer = () => {
                 </p>
 
                 <p className="text-[10px] uppercase tracking-[0.2em] text-[var(--muted)]">
-                  Senior MERN Developer · Team Lead
+                  Full Stack AI Engineer
                 </p>
               </div>
             </div>
 
             <p className="mt-5 max-w-md text-sm leading-7 text-[var(--muted)]">
-              Building full-stack MERN and
-              TypeScript applications, scalable
-              backends and enterprise platforms
-              from concept to production.
+              Building AI agents, LLM-powered
+              workflows and full-stack TypeScript
+              applications from concept to
+              production.
             </p>
           </div>
 
