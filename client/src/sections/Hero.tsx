@@ -76,10 +76,10 @@ const Hero = () => {
             <p className="mt-7 max-w-2xl text-base leading-7 text-[var(--muted)] sm:text-lg">
               I'm Naveed Ahmed, a Full Stack AI Engineer with 4+ years
               of experience building scalable web applications and
-              production AI systems. I'm currently building a private
-              AI agent platform at Leaders Performance (Dubai), from
-              agent architecture and memory to data privacy and human
-              approval workflows.
+              production AI systems. I'm currently building an AI
+              executive assistant at Leaders Performance (Dubai), with
+              document-grounded answers, bilingual voice and access
+              control on every read and write.
             </p>
 
             {/* Tags */}

@@ -26,10 +26,11 @@ const roles: Role[] = [
     location: "Dubai · Remote from Lahore",
     current: true,
     points: [
-      "Building a private AI agent platform as a full-stack engineer, taking features from technical design to production.",
-      "Designing the agent architecture and LLM-driven workflows: reliable conversations, memory, and human review and approval built into the flow.",
-      "Implementing secure access control and data privacy boundaries, and building fault-tolerant features with a focus on data integrity.",
-      "Evaluating third-party integrations for feasibility, security and cost, and backing technical decisions with test evidence when working with cross-functional teams.",
+      "Building an AI executive assistant for the company's leadership across the full stack: React 19 and TypeScript on the frontend, Node.js, Express, Prisma and PostgreSQL on the backend, and Google Gemini for reasoning, document understanding and speech.",
+      "Built document-grounded conversations: answers from uploaded PDFs, documents, sheets and images cite the source file and page, and user corrections are applied to later answers.",
+      "Delivered bilingual voice conversation in English and Dutch, with transcription, check-before-send, read-aloud, and recordings that survive connection loss and can be retried.",
+      "Engineered reliability for unstable networks: idempotent requests so a question is never answered twice, an offline outbox, draft sync across tabs and versioned records with conflict detection.",
+      "Implemented access control on every read and write, scoped to owner, work area and case, with audited moves between areas, and designed a least-privilege tasks and calendar integration where writes need explicit approval.",
     ],
   },
   {

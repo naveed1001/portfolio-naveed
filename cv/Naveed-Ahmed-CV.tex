@@ -124,7 +124,7 @@
 %---------- PROFESSIONAL SUMMARY ----------
 \section{Professional Summary}
 
-Full Stack AI Engineer with 4+ years of experience building scalable web applications, enterprise software, and production AI systems. Currently building a private AI agent platform at Leaders Performance (Dubai, remote), covering agent architecture, reliable conversations and memory, data privacy boundaries, and human approval workflows. Hands-on with LLM integration, Retrieval-Augmented Generation (RAG), AI agents with tool calling, structured LLM outputs, real-time streaming, and voice input, on a full-stack foundation. Experienced in leading development teams, acting as the primary technical contact for clients, and taking products from concept to production across aviation, inventory management, digital media, and AI.
+Full Stack AI Engineer with 4+ years of experience building scalable web applications, enterprise software, and production AI systems. Currently building an AI executive assistant at Leaders Performance (Dubai, remote), with document-grounded answers that cite their sources, bilingual English and Dutch voice, reliability on unstable networks, and access control on every read and write. Hands-on with LLM integration, Retrieval-Augmented Generation (RAG), AI agents with tool calling, structured LLM outputs, real-time streaming, and voice input, on a full-stack foundation. Experienced in leading development teams, acting as the primary technical contact for clients, and taking products from concept to production across aviation, inventory management, digital media, and AI.
 
 \vspace{-2pt}
 
@@ -133,11 +133,13 @@ Full Stack AI Engineer with 4+ years of experience building scalable web applica
 \begin{itemize}[leftmargin=0.15in, label={}]
   \small{\item{
     \textbf{Languages}{: HTML, CSS, JavaScript, TypeScript, Python} \\
-    \textbf{Frameworks \& Libraries}{: React.js, Next.js, Node.js, Express.js, NestJS, Django, Redux Toolkit, Tailwind CSS, Bootstrap} \\
-    \textbf{AI Engineering}{: LLM Integration, Generative AI, AI Agents, Tool Calling, RAG, Embeddings, Vector Search, Structured Output, SSE Streaming, Speech Recognition, Agent Memory, Human-in-the-Loop, Guardrails, Recommendations} \\
+    \textbf{Frameworks \& Libraries}{: React.js, Next.js, Node.js, Express.js, NestJS, Django, Prisma, Zod, Redux Toolkit, Tailwind CSS, Radix UI, Bootstrap} \\
+    \textbf{AI Engineering}{: LLM Integration, Google Gemini, Generative AI, AI Agents, Tool Calling, RAG, Embeddings, Vector Search, Structured Output, SSE Streaming, Speech Recognition, Text-to-Speech, Multilingual Voice, Agent Memory, Human-in-the-Loop, Guardrails, Recommendations} \\
     \textbf{Databases}{: MongoDB, MySQL, PostgreSQL (pgvector), Supabase} \\
     \textbf{Messaging \& Caching}{: Redis, RabbitMQ, BullMQ} \\
     \textbf{Cloud \& DevOps}{: AWS (EC2, S3, Lambda), Docker, Microservices, API Gateways, CI/CD Pipelines} \\
+    \textbf{APIs \& Integrations}{: REST and RPC APIs, Swagger/OpenAPI, OAuth, Lark Open Platform} \\
+    \textbf{Testing \& Quality}{: Vitest, Testing Library, Playwright, Accessibility (WCAG, axe-core), Database Migrations with Rollback} \\
     \textbf{Tools}{: Git, GitHub, Postman, JIRA, ClickUp, Claude, Cursor} \\
   }}
 \end{itemize}
@@ -151,8 +153,8 @@ Full Stack AI Engineer with 4+ years of experience building scalable web applica
     {Full Stack AI Engineer}{Dubai, UAE (Remote)}
     \vspace{-2pt}
   \resumeItemListStart
-    \resumeItem{Building a private AI agent platform as a full-stack engineer, taking features from technical design to production-ready releases.}
-    \resumeItem{Designing the AI agent architecture and LLM-driven workflows, including reliable conversations, memory, and human review and approval steps.}
+    \resumeItem{Building an {\textbf{AI Executive Assistant}} for the company's leadership as a full-stack engineer, taking features from technical design to production-ready releases.}
+    \resumeItem{Designing AI agent architecture and LLM-driven workflows with human review and approval built into the flow.}
     \resumeItem{Implementing secure access control and data privacy boundaries, and building fault-tolerant features with a focus on data integrity.}
     \resumeItem{Evaluating third-party integrations for feasibility, security, and cost, and backing technical decisions with test evidence alongside cross-functional teams.}
   \resumeItemListEnd
@@ -201,6 +203,32 @@ Full Stack AI Engineer with 4+ years of experience building scalable web applica
 \resumeSubHeadingListStart
 
   \resumeProjectHeading
+    {\textbf{AI Executive Assistant} $|$ \emph{React 19, TypeScript, Node.js, Express.js, Prisma, PostgreSQL, Gemini}}{}
+  \resumeItemListStart
+    \resumeItem{Building a full-stack AI executive assistant for a company's leadership team, currently in pilot.}
+    \resumeItem{Built document-grounded answers over PDFs, sheets, and images, citing the source file and page.}
+    \resumeItem{Delivered bilingual English and Dutch voice with transcription, check-before-send, and read-aloud.}
+    \resumeItem{Engineered offline-safe reliability: idempotent requests, an offline outbox, and conflict detection.}
+    \resumeItem{Enforced access control on every read and write, scoped to owner, work area, and case, with audit trails.}
+    \resumeItem{Designed a least-privilege Lark tasks and calendar integration, with writes only after explicit approval.}
+  \resumeItemListEnd
+
+  \vspace{-10pt}
+
+  \resumeProjectHeading
+    {\textbf{Enterprise Knowledge Intelligence Platform} $|$ \emph{React, TypeScript, Python, FastAPI, PostgreSQL, pgvector, Gemini}}{}
+  \resumeItemListStart
+    \resumeItem{Built an AI knowledge assistant for a private jet charter platform, with answers scoped to each role.}
+    \resumeItem{Implemented an end-to-end RAG pipeline: chunking, embeddings, semantic retrieval, and cited answers.}
+    \resumeItem{Tuned retrieval with relevance thresholds, heading-aware chunking, query rewriting, and retrieval memory.}
+    \resumeItem{Added intent detection, structured outputs, SSE streaming, and tool calling behind authorization gates.}
+    \resumeItem{Built a bounded multi-step agent with step limits, no-progress detection, and step-level tracing.}
+    \resumeItem{Enforced guardrails and cost controls: token budgets, usage monitoring, and backend-only API credentials.}
+  \resumeItemListEnd
+
+  \vspace{-10pt}
+
+  \resumeProjectHeading
     {\textbf{Private Jet Aviation Platform} $|$ \emph{React, TypeScript, Node.js, Express.js, MySQL, Stripe, AWS}}{}
   \resumeItemListStart
     \resumeItem{Developed a full-stack private jet charter marketplace connecting operators, brokers, and flyers.}
@@ -217,18 +245,6 @@ Full Stack AI Engineer with 4+ years of experience building scalable web applica
     \resumeItem{Engineered AI content pipelines (song meanings, news) using Gemini, Vertex AI batch jobs, and BullMQ; implemented Google Ad Manager key-value targeting and rolled out PubGuru header bidding to production in phases.}
     \resumeItem{Built an admin CMS with role-based access control, AI article generation and scheduling, a batch-job operations console, and a UGC moderation suite.}
     \resumeItem{Cut API query times by 83\% (300ms to 50ms) by consolidating a 7M+ document catalog from scattered staging collections into 3 core MongoDB collections with indexed ID-based lookups.}
-  \resumeItemListEnd
-
-  \vspace{-10pt}
-
-  \resumeProjectHeading
-    {\textbf{Enterprise Knowledge Intelligence Platform} $|$ \emph{React, TypeScript, Python, Django, pgvector, Gemini, RAG}}{}
-  \resumeItemListStart
-    \resumeItem{Built a production-oriented AI platform, progressively implementing LLM capabilities including intent detection, structured outputs, RAG, streaming, tool calling, and AI agents.}
-    \resumeItem{Designed and implemented an end-to-end Retrieval-Augmented Generation (RAG) pipeline, including document chunking, embeddings, semantic retrieval, relevance thresholds, grounded response generation, and citations.}
-    \resumeItem{Improved retrieval quality through heading-aware chunking, lazy query rewriting, and retrieval memory, so responses are grounded in relevant knowledge rather than blindly retrieved content.}
-    \resumeItem{Developed a bounded multi-step AI agent architecture with execution limits, no-progress detection, and step-level tracing for reliable and observable agent execution.}
-    \resumeItem{Implemented AI guardrails and cost controls, including token budgets, usage monitoring, backend-secured API credentials, and protections against uncontrolled model execution.}
   \resumeItemListEnd
 
 \resumeSubHeadingListEnd

@@ -404,9 +404,8 @@ const ProjectDetails = () => {
               </SectionTitle>
 
               <p className="mt-4 max-w-2xl text-sm leading-7 text-[var(--muted)]">
-                A staged breakdown of what I built,
-                each capability building on the stage
-                before it.
+                A breakdown of what I built,
+                capability by capability.
               </p>
 
               <div className="mt-8 space-y-5">

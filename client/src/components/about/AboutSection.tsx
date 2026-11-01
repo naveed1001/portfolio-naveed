@@ -91,12 +91,13 @@ const AboutSection = () => {
                 enterprise software and production AI
                 systems. I currently work with Leaders
                 Performance (Dubai), remotely from
-                Lahore, building a private AI agent
-                platform — the agent architecture,
-                reliable conversations and memory,
-                data privacy boundaries, human
-                approval workflows and integration
-                planning.
+                Lahore, building an AI executive
+                assistant for the company's leadership —
+                answers grounded in company documents
+                with file and page citations, bilingual
+                English and Dutch voice, reliability on
+                unstable networks, and access control
+                on every read and write.
               </p>
 
               <p>

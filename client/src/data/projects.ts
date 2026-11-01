@@ -92,9 +92,195 @@ export const projects: Project[] = [
   },
 
   {
+    _id: "ai-executive-assistant",
+
+    title: "AI Executive Assistant",
+
+    slug: "ai-executive-assistant",
+
+    description:
+      "An AI executive assistant for the leadership of a Dubai-based consultancy, currently in pilot. It answers questions from company documents with file and page citations, holds voice conversations in English and Dutch, and keeps every conversation inside the right work area, with access checked on every read and write.",
+
+    technologies: [
+      "React 19",
+      "TypeScript",
+      "Node.js",
+      "Google Gemini",
+      "Express.js",
+      "Prisma",
+      "PostgreSQL",
+      "Tailwind CSS",
+      "Docker",
+    ],
+
+    category: "AI Engineering",
+
+    githubUrl: "",
+
+    liveUrl: "",
+
+    featured: false,
+
+    year: 2026,
+
+    features: [
+      "Answers grounded in uploaded files, citing the source file and page",
+      "PDFs, documents, sheets, images and audio up to 25 MB, with a visible summary of what the assistant read",
+      "User corrections are remembered and applied to later answers",
+      "Bilingual English and Dutch voice with transcription, check-before-send and read-aloud",
+      "Voice commands such as \"send\", \"cancel\" and \"stop\"",
+      "Idempotent requests, so a question is never answered twice",
+      "Offline outbox, draft sync across tabs and versioned records with conflict detection",
+      "Server-side access control on every read and write, scoped to owner, work area and case",
+      "Daily overview of business priorities, with check-ins in Dubai time and Pakistan time alongside",
+      "Least-privilege tasks and calendar integration, with writes only after explicit approval",
+    ],
+
+    image: "/projects/ai-executive-assistant/cover.webp",
+
+    gallery: [],
+
+    order: 2,
+
+    overview:
+      "A busy founder needed one assistant they could trust: one that answers questions from company documents and shows where each answer came from, takes voice input in English and Dutch, gives a daily overview of business priorities and commitments, and keeps business and private information strictly apart. I'm building it as the Full Stack AI Engineer, owning everything from the React 19 and TypeScript frontend to the Express, Prisma and PostgreSQL backend and the Google Gemini models behind reasoning, document understanding and speech. The assistant is currently in pilot with the company's leadership.",
+
+    capabilities: [
+      {
+        title: "Home Overview",
+
+        summary:
+          "A daily starting point that shows what matters today.",
+
+        points: [
+          "Daily business summary and top priorities.",
+          "A Today card with scheduled check-ins in Dubai time.",
+          "Pakistan time shown beside each check-in for the distributed team.",
+        ],
+      },
+
+      {
+        title: "Document-Grounded Conversation",
+
+        summary:
+          "Answers come from the user's own files and show exactly where they came from.",
+
+        points: [
+          "Answers cite the source file and page.",
+          "Users can correct what they said or correct the assistant's answer, and corrections are used afterwards.",
+          "Messages show their time and are grouped by day, with older days collapsed.",
+        ],
+      },
+
+      {
+        title: "Documents",
+
+        summary:
+          "Users bring in the files they already work with.",
+
+        points: [
+          "PDFs, documents, sheets, images and audio up to 25 MB.",
+          "A visible \"what the assistant read\" summary for each file.",
+          "PDF text extraction with pdf.js.",
+        ],
+      },
+
+      {
+        title: "Bilingual Voice",
+
+        summary:
+          "Spoken conversation in English and Dutch that holds up on a weak connection.",
+
+        points: [
+          "Spoken words are shown for checking before they are sent.",
+          "Voice commands: \"send\", \"cancel\" and \"stop\".",
+          "Answers can be read aloud with Gemini text-to-speech.",
+          "A failed recording is kept on the device and can be retried.",
+        ],
+      },
+
+      {
+        title: "Work Areas & Access Control",
+
+        summary:
+          "Every conversation belongs to a business area or case, and access is enforced on the server.",
+
+        points: [
+          "Access is checked on every read and write.",
+          "Older conversations can be assigned to an area and moved between business areas.",
+          "Every move is audited with a recorded reason.",
+          "Private areas can't be moved into or out of.",
+        ],
+      },
+
+      {
+        title: "Reliability on Unstable Networks",
+
+        summary:
+          "Built so that a dropped connection never loses or duplicates work.",
+
+        points: [
+          "Idempotent requests: every question carries a receipt key.",
+          "Offline outbox for actions taken while disconnected.",
+          "Draft sync across browser tabs.",
+          "Versioned records with conflict detection.",
+        ],
+      },
+
+      {
+        title: "Least-Privilege Integration",
+
+        summary:
+          "A tasks and calendar integration designed to earn trust step by step.",
+
+        points: [
+          "Read-only access first.",
+          "Writes only after explicit approval.",
+          "Usage kept within the plan's API limits.",
+          "Tested with test data before touching anything real.",
+        ],
+      },
+
+      {
+        title: "Testing & Delivery",
+
+        summary:
+          "Every feature shipped as a verified, approved step.",
+
+        points: [
+          "Automated tests with Vitest and Testing Library.",
+          "Browser probes with Playwright and axe-core accessibility checks.",
+          "A staging check and an on-screen test with test data before release.",
+          "A written report for a non-technical CEO after each step: what was built, the evidence, the risks and the decisions needed.",
+          "Nothing released without explicit approval.",
+        ],
+      },
+    ],
+
+    challenges: [
+      "Retries, refreshes and double-clicks on an unstable connection could create duplicate questions and answers",
+      "Business and private information had to stay strictly separated, and no account could ever see another account's conversations",
+      "Voice recordings could be lost when the connection dropped mid-upload",
+      "The team works across Dubai and Pakistan, so dates and check-in times had to be unambiguous in both time zones",
+      "A 502 error after deployment left the frontend unable to reach the backend",
+    ],
+
+    solutions: [
+      "Gave every question a receipt key, so retries, refreshes and double-clicks never create a duplicate question or answer",
+      "Checked access on the server for every read and write, scoped each conversation to its owner, work area and case, and returned \"not found\" for other accounts' conversations instead of revealing that they exist",
+      "Kept failed recordings on the device behind an offline outbox, so they can be retried once the connection returns",
+      "Followed the Dubai business calendar for all dates and showed Pakistan time beside every check-in",
+      "Traced the 502 to a proxy pointing at the frontend container itself instead of the backend container, and fixed it so local, Docker and server-side calls all reach the same backend",
+    ],
+
+    architecture:
+      "A React 19 and TypeScript frontend, served through Vite, sends its /api calls through a proxy to an Express backend that exposes typed RPC endpoints documented with Swagger. Prisma and PostgreSQL hold the data, and every change goes through versioned commands carrying idempotency keys and correlation IDs. Google Gemini Flash models handle answers and document understanding, Gemini text-to-speech handles read-aloud, and pdf.js extracts text from PDFs. The frontend and backend ship as Docker containers, with a separate staging database for testing migrations.",
+  },
+
+  {
     _id: "confidential-ai-platform",
 
-    title: "Confidential AI Platform",
+    title: "Enterprise Knowledge Intelligence Platform",
 
     slug: "confidential-ai-platform",
 
@@ -102,14 +288,15 @@ export const projects: Project[] = [
       "A production-oriented AI platform, grown capability by capability from rule-based intent detection into a full retrieval-augmented system with streaming responses, controlled tool calling and bounded agents. Every layer is engineered for control rather than raw generation: grounded answers with citations, authorization gates before any tool runs, token budgets and step-level observability.",
 
     technologies: [
+      "React",
       "TypeScript",
-      "Node.js",
-      "Express.js",
+      "Python",
+      "FastAPI",
+      "PostgreSQL",
+      "pgvector",
       "Gemini",
       "RAG",
-      "MySQL",
       "SSE",
-      "AWS",
     ],
 
     category: "AI Engineering",
@@ -134,11 +321,11 @@ export const projects: Project[] = [
       "Non-generative recommendation system",
     ],
 
-    image: "",
+    image: "/projects/confidential-ai-platform/cover.png",
 
     gallery: [],
 
-    order: 2,
+    order: 3,
 
     overview:
       "I developed and contributed to a production-oriented AI platform, adding one AI capability at a time rather than shipping a single chatbot: keyword-based intent detection with Gemini responses first, then structured output schemas, an end-to-end Retrieval-Augmented Generation pipeline, streaming over Server-Sent Events, a controlled tool-calling registry, a bounded agent loop, and finally guardrails, cost monitoring and a non-generative recommendation system. The focus throughout was reliability, controlled AI behavior, security, observability and practical production use cases, treating the model as one component inside an engineered system rather than an API call that is trusted to do the right thing.",
@@ -152,7 +339,7 @@ export const projects: Project[] = [
 
         points: [
           "Implemented keyword-based intent detection.",
-          "Added conversation history using MySQL.",
+          "Added conversation history using PostgreSQL.",
           "Kept LLM API keys securely on the backend.",
           "Created multiple AI interaction flows.",
         ],
@@ -180,7 +367,7 @@ export const projects: Project[] = [
 
         points: [
           "Implemented document chunking and embedding.",
-          "Stored embeddings and metadata in MySQL.",
+          "Stored embeddings and chunk metadata in PostgreSQL with pgvector.",
           "Retrieved relevant knowledge based on semantic similarity.",
           "Generated grounded responses using retrieved context.",
           "Added citations to AI responses.",
@@ -292,7 +479,7 @@ export const projects: Project[] = [
     ],
 
     architecture:
-      "The AI layer is built as a progression, Rules → LLM → Structured Output → RAG → Streaming → Tools → Agents → Guardrails → Recommendations, where each stage builds on the previous one, so retrieval grounds generation, structured output feeds tool calling, and tool calling becomes the bounded agent loop that the guardrails then constrain. A Node.js and Express backend on AWS holds the orchestration, prompt layers and API credentials, with MySQL storing conversation history, embeddings and chunk metadata. Server-Sent Events stream model output through the backend to the browser without buffering.",
+      "The AI layer is built as a progression, Rules → LLM → Structured Output → RAG → Streaming → Tools → Agents → Guardrails → Recommendations, where each stage builds on the previous one, so retrieval grounds generation, structured output feeds tool calling, and tool calling becomes the bounded agent loop that the guardrails then constrain. A Python and FastAPI backend behind a React and TypeScript frontend holds the orchestration, prompt layers and API credentials, with PostgreSQL and pgvector storing conversation history, embeddings and chunk metadata. Server-Sent Events stream model output through the backend to the browser without buffering.",
   },
 
   {
@@ -339,7 +526,7 @@ export const projects: Project[] = [
 
     gallery: [],
 
-    order: 3,
+    order: 4,
 
     overview:
       "This is an ad-supported music lyrics platform where I drove full-stack development at TheCloudOps. The catalog is the product, more than 11 million song, artist and album documents that have to be crawlable, fast and monetized at the same time. My work spans the rendering strategy for those pages, the AI pipelines that enrich them with song meanings and news, the ad stack that pays for them, and the admin CMS the editorial team uses to run the whole thing.",
@@ -400,11 +587,11 @@ export const projects: Project[] = [
       "Cloud deployment on AWS for scalability and high availability",
     ],
 
-    image: "",
+    image: "/projects/bike-inventory-system/cover.png",
 
     gallery: [],
 
-    order: 4,
+    order: 5,
 
     overview:
       "The Bike Inventory System was built during my time as a MERN Stack Developer at OIOI Group to optimize warehouse operations. Instead of stock levels living in spreadsheets, the system keeps inventory in MySQL and records each transfer between locations as it happens, so warehouse staff and management look at the same numbers. I built the API and data layer and deployed the result on AWS.",
